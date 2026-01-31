@@ -1,12 +1,12 @@
 <template>
   <main>
     <header
-      class="fixed top-0 left-0 w-full z-50 border-b backdrop-blur bg-background/80"
+      class="fixed top-0 left-0 w-full z-50 border-b border-base-200 backdrop-blur bg-background/80"
     >
       <div class="container flex h-16 items-center justify-between px-4">
         <div class="flex items-center gap-6">
           <a aria-label="Homepage" class="flex items-center gap-2" href="/">
-            <span class="text-2xl font-bold text-primary">Tech FA</span>
+            <img src="/tech-fa-words.png" class="h-14"/>
           </a>
           <nav class="hidden md:flex items-center gap-6">
             <a
@@ -138,7 +138,7 @@
             </h1>
             <p class="text-center text-lg sm:text-xl text-muted-foreground mt-6 max-w-3xl mx-auto">
               We integrate all your applications together and marinate them with AI.
-              Existing services or custom solutions — no data migrations required.
+              Existing services or custom solutions. No data migrations required.
             </p>
           </div>
           <div
@@ -173,7 +173,7 @@
       </section>
 
       <!-- Why Us Section -->
-      <section id="why-us" class="py-20 bg-base-50">
+      <section id="why-us" class="py-20 bg-background">
         <div class="container mx-auto px-4">
           <div class="max-w-4xl mx-auto text-center">
             <div
@@ -207,12 +207,12 @@
               Whether you use off-the-shelf services or custom solutions,
               <span class="text-foreground font-semibold"
                 >we connect directly to your data</span
-              > — no painful migrations, no disruptions to your workflow.
+              >. No painful migrations, no disruptions to your workflow.
             </p>
 
             <div class="grid md:grid-cols-3 gap-8 mt-12">
               <div
-                class="bg-background rounded-2xl p-8 shadow-sm border border-base-200"
+                class="bg-base-200/50 rounded-2xl p-8 border border-base-300"
               >
                 <div
                   class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"
@@ -242,7 +242,7 @@
               </div>
 
               <div
-                class="bg-background rounded-2xl p-8 shadow-sm border border-base-200"
+                class="bg-base-200/50 rounded-2xl p-8 border border-base-300"
               >
                 <div
                   class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"
@@ -272,7 +272,7 @@
               </div>
 
               <div
-                class="bg-background rounded-2xl p-8 shadow-sm border border-base-200"
+                class="bg-base-200/50 rounded-2xl p-8 border border-base-300"
               >
                 <div
                   class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"
@@ -306,7 +306,7 @@
               class="mt-12 p-6 bg-primary/5 rounded-2xl border border-primary/20"
             >
               <p class="text-foreground font-medium text-lg">
-                "Great software doesn't replace what works — it makes everything work better together."
+                "Great software doesn't replace what works. It makes everything work better together."
               </p>
             </div>
           </div>
@@ -324,7 +324,7 @@
                 What We Do
               </h2>
               <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                From connecting your existing tools to building custom AI solutions — we've got you covered.
+                From connecting your existing tools to building custom AI solutions. We've got you covered.
               </p>
             </div>
 
@@ -434,7 +434,7 @@
 
               <!-- Service 3: Custom Development -->
               <div
-                class="rounded-2xl border border-base-200 bg-background p-8 hover:shadow-lg transition-shadow"
+                class="rounded-2xl border border-base-300 bg-base-200/50 p-8 hover:border-primary/50 transition-all"
               >
                 <div
                   class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6"
@@ -485,7 +485,7 @@
 
               <!-- Service 4: Consulting -->
               <div
-                class="rounded-2xl border border-base-200 bg-background p-8 hover:shadow-lg transition-shadow"
+                class="rounded-2xl border border-base-300 bg-base-200/50 p-8 hover:border-primary/50 transition-all"
               >
                 <div
                   class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-6"
@@ -565,7 +565,7 @@
       </section>
 
       <!-- How It Works Section -->
-      <section id="how-it-works" class="py-20 bg-base-50">
+      <section id="how-it-works" class="py-20 bg-background">
         <div class="container mx-auto px-4">
           <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16">
@@ -703,19 +703,19 @@
       </section>
       <section
         id="contact"
-        class="py-24 bg-gradient-to-br from-primary-50 via-white to-secondary-50 relative overflow-hidden"
+        class="py-24 bg-background relative overflow-hidden"
       >
         <!-- Background decorations -->
         <div
-          class="absolute top-0 right-0 w-96 h-96 bg-primary-200/30 rounded-full blur-3xl"
+          class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
         ></div>
         <div
-          class="absolute bottom-0 left-0 w-80 h-80 bg-secondary-200/30 rounded-full blur-3xl"
+          class="absolute bottom-0 left-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl"
         ></div>
         <div class="container mx-auto px-4 relative z-10">
           <div class="text-center mb-12">
             <span
-              class="inline-block px-4 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-4"
+              class="inline-block px-4 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium mb-4"
               >Contact Us</span
             >
             <h2 class="text-4xl font-bold text-foreground mb-4">
@@ -730,7 +730,7 @@
             <div class="flex flex-col justify-center">
               <div class="space-y-6">
                 <div
-                  class="flex items-center bg-background p-5 rounded-2xl shadow-sm border border-base-200 hover:shadow-md transition-all duration-300"
+                  class="flex items-center bg-base-200/50 p-5 rounded-2xl border border-base-300 hover:border-primary/50 transition-all duration-300"
                 >
                   <div
                     class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mr-4"
@@ -739,12 +739,12 @@
                   </div>
                   <div>
                     <h4 class="font-semibold text-foreground">Email Us</h4>
-                    <p class="text-primary">hello@techfa.io</p>
+                    <p class="text-primary">ali@tech-fa.ca</p>
                   </div>
                 </div>
 
                 <div
-                  class="flex items-center bg-background p-5 rounded-2xl shadow-sm border border-base-200 hover:shadow-md transition-all duration-300"
+                  class="flex items-center bg-base-200/50 p-5 rounded-2xl border border-base-300 hover:border-primary/50 transition-all duration-300"
                 >
                   <div
                     class="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center mr-4"
@@ -767,7 +767,7 @@
                 </p>
                 <div class="flex space-x-3">
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/company/tech-fa"
                     class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white hover:bg-primary-focus cursor-pointer transition-all duration-300"
                   >
                     <i class="fa-brands fa-linkedin-in text-lg"></i>
@@ -789,7 +789,7 @@
             </div>
             <div>
               <div
-                class="bg-background p-8 rounded-2xl shadow-xl border border-base-200"
+                class="bg-base-200/50 p-8 rounded-2xl border border-base-300"
               >
                 <h3 class="text-2xl font-semibold mb-6 text-foreground">
                   Send Us a Message
@@ -805,7 +805,7 @@
                       id="name"
                       type="text"
                       v-model="form.name"
-                      class="w-full p-4 border border-base-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
+                      class="w-full p-4 bg-base-200/50 border border-base-300 rounded-xl text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
                       placeholder="Your name"
                       required
                     />
@@ -820,7 +820,7 @@
                       id="email"
                       type="email"
                       v-model="form.email"
-                      class="w-full p-4 border border-base-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
+                      class="w-full p-4 bg-base-200/50 border border-base-300 rounded-xl text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
                       placeholder="your@email.com"
                       required
                     />
@@ -835,7 +835,7 @@
                       id="company"
                       type="text"
                       v-model="form.company"
-                      class="w-full p-4 border border-base-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
+                      class="w-full p-4 bg-base-200/50 border border-base-300 rounded-xl text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
                       placeholder="Your company name"
                     />
                   </div>
@@ -849,7 +849,7 @@
                       id="message"
                       rows="4"
                       v-model="form.message"
-                      class="w-full p-4 border border-base-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
+                      class="w-full p-4 bg-base-200/50 border border-base-300 rounded-xl text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
                       placeholder="Tell us about your project"
                       required
                     ></textarea>
@@ -883,15 +883,15 @@
       </section>
 
       <!-- Footer -->
-      <footer class="bg-primary-900 text-primary-100 py-16">
+      <footer class="bg-background text-base-content py-16 border-t border-base-200">
         <div class="container mx-auto px-4">
           <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Logo and Description -->
             <div class="md:col-span-2">
               <div class="flex items-center gap-3 mb-4">
-                <span class="text-3xl font-bold text-white">Tech FA</span>
+                <img src="/tech-fa-full.png" class="h-14"/>
               </div>
-              <p class="text-sm text-primary-200 leading-relaxed max-w-md">
+              <p class="text-sm text-muted-foreground leading-relaxed max-w-md">
                 Integrating your applications and supercharging them with AI.
                 No data migrations — we connect directly to your systems.
               </p>
@@ -899,33 +899,33 @@
 
             <!-- Quick Links -->
             <div>
-              <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+              <h4 class="text-foreground font-semibold mb-4">Quick Links</h4>
               <ul class="space-y-2">
                 <li>
                   <a
                     href="#why-us"
-                    class="text-primary-200 hover:text-white transition"
+                    class="text-muted-foreground hover:text-primary transition"
                     >Why Us</a
                   >
                 </li>
                 <li>
                   <a
                     href="#services"
-                    class="text-primary-200 hover:text-white transition"
+                    class="text-muted-foreground hover:text-primary transition"
                     >Services</a
                   >
                 </li>
                 <li>
                   <a
                     href="#how-it-works"
-                    class="text-primary-200 hover:text-white transition"
+                    class="text-muted-foreground hover:text-primary transition"
                     >How It Works</a
                   >
                 </li>
                 <li>
                   <a
                     href="#contact"
-                    class="text-primary-200 hover:text-white transition"
+                    class="text-muted-foreground hover:text-primary transition"
                     >Contact</a
                   >
                 </li>
@@ -934,41 +934,41 @@
 
             <!-- Contact Info -->
             <div>
-              <h4 class="text-white font-semibold mb-4">Contact</h4>
+              <h4 class="text-foreground font-semibold mb-4">Contact</h4>
               <ul class="space-y-2">
-                <li class="text-primary-200">
+                <li class="text-muted-foreground">
                   <i class="fa-solid fa-envelope mr-2"></i>
-                  hello@techfa.io
+                  ali@tech-fa.ca
                 </li>
               </ul>
             </div>
           </div>
 
-          <div class="border-t border-primary-700 mt-12 pt-8">
+          <div class="border-t border-base-200 mt-12 pt-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
-              <p class="text-sm mb-4 md:mb-0 text-primary-300">
+              <p class="text-sm mb-4 md:mb-0 text-muted-foreground">
                 © 2025 Tech FA. All rights reserved.
               </p>
               <div class="flex space-x-4">
                 <a
                   href="#"
-                  class="w-10 h-10 bg-primary-800 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300"
+                  class="w-10 h-10 bg-base-200 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300"
                   ><i
-                    class="fab fa-twitter text-primary-200 hover:text-white"
+                    class="fab fa-twitter text-muted-foreground hover:text-primary-content"
+                  ></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/company/tech-fa"
+                  class="w-10 h-10 bg-base-200 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300"
+                  ><i
+                    class="fab fa-linkedin text-muted-foreground hover:text-primary-content"
                   ></i
                 ></a>
                 <a
                   href="#"
-                  class="w-10 h-10 bg-primary-800 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300"
+                  class="w-10 h-10 bg-base-200 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300"
                   ><i
-                    class="fab fa-linkedin text-primary-200 hover:text-white"
-                  ></i
-                ></a>
-                <a
-                  href="#"
-                  class="w-10 h-10 bg-primary-800 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300"
-                  ><i
-                    class="fab fa-github text-primary-200 hover:text-white"
+                    class="fab fa-github text-muted-foreground hover:text-primary-content"
                   ></i
                 ></a>
               </div>

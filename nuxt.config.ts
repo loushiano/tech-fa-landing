@@ -21,7 +21,7 @@ export default defineNuxtConfig({
             "Tech FA integrates all your applications together and supercharges them with AI. No data migrations required — we connect directly to your systems.",
         },
       ],
-      link: [{ rel: "icon", type: "image/png", href: "/tree-logo.png" }],
+      link: [{ rel: "icon", type: "image/png", href: "/tech-fa-icon.png" }],
     },
   },
 });

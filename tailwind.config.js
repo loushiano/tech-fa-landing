@@ -11,6 +11,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        background: 'var(--color-background)',
+        foreground: 'var(--color-foreground)',
+        'muted-foreground': 'var(--color-muted-foreground)',
         base: {
           DEFAULT: 'var(--color-base)',
           50: 'var(--color-base-50)',
@@ -39,6 +42,23 @@ module.exports = {
           900: 'var(--color-primary-900)',
           focus: 'var(--color-primary-focus)',
           content: 'var(--color-primary-content)',
+          light: 'var(--color-primary-light)',
+        },
+        secondary: {
+          DEFAULT: 'var(--color-secondary)',
+          50: 'var(--color-secondary-50)',
+          100: 'var(--color-secondary-100)',
+          200: 'var(--color-secondary-200)',
+          300: 'var(--color-secondary-300)',
+          400: 'var(--color-secondary-400)',
+          500: 'var(--color-secondary-500)',
+          600: 'var(--color-secondary-600)',
+          700: 'var(--color-secondary-700)',
+          800: 'var(--color-secondary-800)',
+          900: 'var(--color-secondary-900)',
+          focus: 'var(--color-secondary-focus)',
+          content: 'var(--color-secondary-content)',
+          foreground: 'var(--color-secondary-foreground)',
         },
         neutral: {
           50: "var(--color-neutral-50)",
@@ -55,8 +75,8 @@ module.exports = {
           focus: "var(--color-neutral-focus)",
           content: "var(--color-neutral-content)",
         },
-        
-        // Add other color schemes as needed
+        success: 'var(--color-success)',
+        error: 'var(--color-error)',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
