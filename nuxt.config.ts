@@ -11,14 +11,14 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: "Vigelon Consulting - AI Solutions",
+      title: "Tech FA - App Integration & AI Solutions",
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         {
           name: "description",
           content:
-            "Vigelon Consulting helps businesses automate workflows, cut costs, and improve decision-making using AI.",
+            "Tech FA integrates all your applications together and supercharges them with AI. No data migrations required — we connect directly to your systems.",
         },
       ],
       link: [{ rel: "icon", type: "image/png", href: "/tree-logo.png" }],

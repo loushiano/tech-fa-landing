@@ -6,7 +6,7 @@
       <div class="container flex h-16 items-center justify-between px-4">
         <div class="flex items-center gap-6">
           <a aria-label="Homepage" class="flex items-center gap-2" href="/">
-            <img src="/cedar-logo-full.png" alt="Cedar Devs" class="h-14" />
+            <span class="text-2xl font-bold text-primary">Tech FA</span>
           </a>
           <nav class="hidden md:flex items-center gap-6">
             <a
@@ -16,8 +16,8 @@
             >
             <a
               class="text-sm font-medium text-foreground hover:text-primary transition"
-              href="#pricing"
-              >Pricing</a
+              href="#services"
+              >Services</a
             >
             <a
               class="text-sm font-medium text-foreground hover:text-primary transition"
@@ -91,9 +91,9 @@
           >
           <a
             class="text-sm font-medium text-foreground hover:text-primary transition py-2"
-            href="#pricing"
+            href="#services"
             @click="mobileMenuOpen = false"
-            >Pricing</a
+            >Services</a
           >
           <a
             class="text-sm font-medium text-foreground hover:text-primary transition py-2"
@@ -129,13 +129,17 @@
               style="filter: blur(0px); opacity: 1; transform: none"
             >
               <span class="inline" style="opacity: 1; transform: none"
-                >Hire Talented, </span
+                >Connect Your Apps. </span
               ><span class="inline" style="opacity: 1; transform: none"
-                >Full Time Developers</span
-              ><span class="inline" style="opacity: 1; transform: none">
-                starting at <span class="text-primary">$9/hr</span></span
+                >Supercharge with </span
+              ><span class="inline text-primary" style="opacity: 1; transform: none"
+                >AI.</span
               >
             </h1>
+            <p class="text-center text-lg sm:text-xl text-muted-foreground mt-6 max-w-3xl mx-auto">
+              We integrate all your applications together and marinate them with AI.
+              Existing services or custom solutions — no data migrations required.
+            </p>
           </div>
           <div
             class="mx-auto mt-6 flex w-full max-w-2xl flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
@@ -149,7 +153,7 @@
                   class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow h-10 rounded-full px-6 relative overflow-hidden group transition-all duration-300 bg-secondary hover:bg-secondary/90 text-secondary-foreground"
                   href="#contact"
                   ><span class="relative z-10 flex items-center font-medium"
-                    >Get Started</span
+                    >Start Your Integration</span
                   ><span
                     class="absolute inset-0 bg-gradient-to-r from-primary-light to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   ></span
@@ -158,7 +162,7 @@
               <a
                 class="flex items-center gap-1 text-sm font-medium py-1 relative group transition-all duration-300 text-muted-foreground hover:text-foreground"
                 href="#contact"
-                ><span>Need help? Book a call</span
+                ><span>Questions? Let's talk</span
                 ><span
                   class="absolute bottom-0 left-0 right-0 h-px bg-current transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
                 ></span
@@ -168,7 +172,7 @@
         </div>
       </section>
 
-      <!-- Quality Over Price Section -->
+      <!-- Why Us Section -->
       <section id="why-us" class="py-20 bg-base-50">
         <div class="container mx-auto px-4">
           <div class="max-w-4xl mx-auto text-center">
@@ -186,28 +190,24 @@
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
                 />
               </svg>
             </div>
             <h2
               class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6"
             >
-              Not Cheap Developers.<br />
-              <span class="text-primary">Exceptional Talent</span> at Fair
-              Rates.
+              Your Apps, Connected.<br />
+              <span class="text-primary">Powered by AI.</span>
             </h2>
             <p
               class="text-lg sm:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed"
             >
-              Our developers come from
-              <span class="text-foreground font-semibold">Lebanon</span>, home
-              to world-class accredited universities like the American
-              University of Beirut and Lebanese American University. We don't
-              just interview them —
+              We specialize in making your existing tools work together seamlessly.
+              Whether you use off-the-shelf services or custom solutions,
               <span class="text-foreground font-semibold"
-                >we build real projects together</span
-              >. That's how we know they're exceptional.
+                >we connect directly to your data</span
+              > — no painful migrations, no disruptions to your workflow.
             </p>
 
             <div class="grid md:grid-cols-3 gap-8 mt-12">
@@ -228,27 +228,16 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M12 14l9-5-9-5-9 5 9 5z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                      d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                     />
                   </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-foreground mb-3">
-                  Top-Tier Education
+                  No Data Migrations
                 </h3>
                 <p class="text-muted-foreground">
-                  Graduates from Lebanon's internationally accredited
-                  universities, trained in rigorous computer science and
-                  engineering programs.
+                  We connect directly to your existing data sources. No risky migrations,
+                  no downtime, no lost records. Your data stays where it is.
                 </p>
               </div>
 
@@ -261,6 +250,198 @@
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="w-6 h-6 text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-foreground mb-3">
+                  AI-Powered Solutions
+                </h3>
+                <p class="text-muted-foreground">
+                  We add intelligent automation to your workflows. From smart data processing
+                  to predictive insights — we marinate your apps with AI.
+                </p>
+              </div>
+
+              <div
+                class="bg-background rounded-2xl p-8 shadow-sm border border-base-200"
+              >
+                <div
+                  class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-foreground mb-3">
+                  Years of Experience
+                </h3>
+                <p class="text-muted-foreground">
+                  Our team has deep expertise in system integration and software development.
+                  We've connected hundreds of apps across diverse industries.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="mt-12 p-6 bg-primary/5 rounded-2xl border border-primary/20"
+            >
+              <p class="text-foreground font-medium text-lg">
+                "Great software doesn't replace what works — it makes everything work better together."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="py-20 bg-background">
+        <div class="container mx-auto px-4">
+          <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+              <h2
+                class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
+              >
+                What We Do
+              </h2>
+              <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                From connecting your existing tools to building custom AI solutions — we've got you covered.
+              </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 gap-8">
+              <!-- Service 1: App Integration -->
+              <div
+                class="rounded-2xl border-2 border-primary/30 bg-primary/5 p-8 hover:shadow-lg transition-shadow"
+              >
+                <div
+                  class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-7 h-7 text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-semibold text-foreground mb-3">
+                  App Integration
+                </h3>
+                <p class="text-muted-foreground mb-4">
+                  Connect your CRM, ERP, accounting software, and any other tools you use.
+                  We build bridges between your systems so data flows automatically.
+                </p>
+                <ul class="space-y-2 text-muted-foreground">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Salesforce, HubSpot, Zoho
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    QuickBooks, Xero, SAP
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Custom APIs & databases
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Service 2: AI Solutions -->
+              <div
+                class="rounded-2xl border-2 border-secondary/30 bg-secondary/5 p-8 hover:shadow-lg transition-shadow"
+              >
+                <div
+                  class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-6"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-7 h-7 text-secondary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-semibold text-foreground mb-3">
+                  AI Enhancement
+                </h3>
+                <p class="text-muted-foreground mb-4">
+                  Add intelligent automation to your workflows. We implement AI that
+                  learns your business and makes your processes smarter.
+                </p>
+                <ul class="space-y-2 text-muted-foreground">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Intelligent document processing
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Predictive analytics
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Chatbots & virtual assistants
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Service 3: Custom Development -->
+              <div
+                class="rounded-2xl border border-base-200 bg-background p-8 hover:shadow-lg transition-shadow"
+              >
+                <div
+                  class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-7 h-7 text-primary"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -273,24 +454,45 @@
                     />
                   </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-foreground mb-3">
-                  Battle-Tested Skills
+                <h3 class="text-2xl font-semibold text-foreground mb-3">
+                  Custom Development
                 </h3>
-                <p class="text-muted-foreground">
-                  We work alongside every developer on real projects before they
-                  join. No guesswork — we've seen their code in action.
+                <p class="text-muted-foreground mb-4">
+                  When off-the-shelf doesn't cut it, we build custom solutions
+                  tailored to your exact needs. Web apps, mobile apps, APIs — you name it.
                 </p>
+                <ul class="space-y-2 text-muted-foreground">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Web applications
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Mobile apps (iOS & Android)
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Backend systems & APIs
+                  </li>
+                </ul>
               </div>
 
+              <!-- Service 4: Consulting -->
               <div
-                class="bg-background rounded-2xl p-8 shadow-sm border border-base-200"
+                class="rounded-2xl border border-base-200 bg-background p-8 hover:shadow-lg transition-shadow"
               >
                 <div
-                  class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"
+                  class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-6"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6 text-primary"
+                    class="w-7 h-7 text-secondary"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -299,250 +501,53 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
                     />
                   </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-foreground mb-3">
-                  Fair Rates, Not Cheap
+                <h3 class="text-2xl font-semibold text-foreground mb-3">
+                  Tech Consulting
                 </h3>
-                <p class="text-muted-foreground">
-                  Lebanon's cost of living means our developers earn well
-                  locally while offering you exceptional value. Everyone wins.
+                <p class="text-muted-foreground mb-4">
+                  Not sure where to start? We'll audit your current setup and recommend
+                  the best path forward. Strategic advice backed by hands-on experience.
                 </p>
+                <ul class="space-y-2 text-muted-foreground">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    System architecture review
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Technology roadmapping
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Vendor selection
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <div
-              class="mt-12 p-6 bg-primary/5 rounded-2xl border border-primary/20"
-            >
-              <p class="text-foreground font-medium text-lg">
-                "The best investment isn't always the cheapest or the most
-                expensive — it's the one that delivers the most value."
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Pricing Comparison Section -->
-      <section id="pricing" class="py-20 bg-background">
-        <div class="container mx-auto px-4">
-          <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-12">
-              <h2
-                class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
-              >
-                Best Value in the Market
-              </h2>
-              <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Don't overpay for the logo. Hire the talent.
-              </p>
-            </div>
-
-            <!-- Pricing Comparison - Matching Reference Design -->
-            <div
-              class="flex flex-col md:flex-row gap-6 md:gap-0 md:items-start items-center"
-            >
-              <!-- Experience Labels (Left Side) -->
-              <div
-                class="hidden md:flex flex-col justify-start pt-24 pr-8 md:w-64 w-96 shrink-0"
-              >
-                <!-- 0-2 Years -->
-                <div class="h-24 flex flex-col justify-center">
-                  <div class="text-sm text-muted-foreground">
-                    Full-Time Developer
-                  </div>
-                  <div class="font-semibold text-foreground">
-                    0-2 Years of Experience
-                  </div>
-                </div>
-                <!-- 2-5 Years -->
-                <div class="h-24 flex flex-col justify-center">
-                  <div class="text-sm text-muted-foreground">
-                    Full-Time Developer
-                  </div>
-                  <div class="font-semibold text-foreground">
-                    2-5 Years of Experience
-                  </div>
-                </div>
-                <!-- 5+ Years -->
-                <div class="h-24 flex flex-col justify-center">
-                  <div class="text-sm text-muted-foreground">
-                    Full-Time Developer
-                  </div>
-                  <div class="font-semibold text-foreground">
-                    5+ Years of Experience
-                  </div>
-                </div>
+            <!-- Value Props -->
+            <div class="mt-16 grid md:grid-cols-3 gap-6 text-center">
+              <div class="p-6">
+                <div class="text-3xl font-bold text-primary mb-2">Competitive</div>
+                <div class="text-muted-foreground">Pricing that makes sense for your budget</div>
               </div>
-
-              <!-- Company Cards -->
-              <div class="flex flex-col md:flex-row gap-4 flex-1 w-full">
-                <!-- Cedar Devs Card -->
-                <div
-                  class="flex-1 rounded-2xl border-2 border-primary/30 bg-primary/5 overflow-hidden"
-                >
-                  <!-- Logo Header -->
-                  <div
-                    class="p-6 flex items-center justify-center gap-2 border-b border-primary/20"
-                  >
-                    <img
-                      src="/cedar-logo-full.png"
-                      alt="Cedar Devs"
-                      class="h-12"
-                    />
-                  </div>
-                  <!-- Prices -->
-                  <div class="flex flex-col">
-                    <div
-                      class="h-24 flex flex-col items-center justify-center border-b border-primary/20"
-                    >
-                      <div class="md:hidden text-xs text-muted-foreground mb-1">
-                        0-2 Years
-                      </div>
-                      <div class="text-2xl font-bold text-primary">
-                        $1,500<span class="text-base font-normal">/mo</span>
-                      </div>
-                    </div>
-                    <div
-                      class="h-24 flex flex-col items-center justify-center border-b border-primary/20"
-                    >
-                      <div class="md:hidden text-xs text-muted-foreground mb-1">
-                        2-5 Years
-                      </div>
-                      <div class="text-2xl font-bold text-primary">
-                        $3,000<span class="text-base font-normal">/mo</span>
-                      </div>
-                    </div>
-                    <div class="h-24 flex flex-col items-center justify-center">
-                      <div class="md:hidden text-xs text-muted-foreground mb-1">
-                        5+ Years
-                      </div>
-                      <div class="text-2xl font-bold text-primary">
-                        $4,000<span class="text-base font-normal">/mo</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Upwork Card -->
-                <div
-                  class="flex-1 rounded-2xl border border-base-200 bg-background overflow-hidden"
-                >
-                  <!-- Logo Header -->
-                  <div
-                    class="p-6 flex items-center justify-center border-b border-base-200 h-[100px]"
-                  >
-                    <img
-                      src="/upwork-logo.webp"
-                      alt="Upwork"
-                      class="h-12 object-contain"
-                    />
-                  </div>
-                  <!-- Prices -->
-                  <div class="flex flex-col">
-                    <div
-                      class="h-24 flex flex-col items-center justify-center border-b border-base-100"
-                    >
-                      <div class="md:hidden text-xs text-muted-foreground mb-1">
-                        0-2 Years
-                      </div>
-                      <div class="text-2xl font-semibold text-foreground">
-                        $2,400<span
-                          class="text-base font-normal text-muted-foreground"
-                          >/mo</span
-                        >
-                      </div>
-                      <div class="text-sm text-muted-foreground">(-$900)</div>
-                    </div>
-                    <div
-                      class="h-24 flex flex-col items-center justify-center border-b border-base-100"
-                    >
-                      <div class="md:hidden text-xs text-muted-foreground mb-1">
-                        2-5 Years
-                      </div>
-                      <div class="text-2xl font-semibold text-foreground">
-                        $4,000<span
-                          class="text-base font-normal text-muted-foreground"
-                          >/mo</span
-                        >
-                      </div>
-                      <div class="text-sm text-muted-foreground">(-$1,000)</div>
-                    </div>
-                    <div class="h-24 flex flex-col items-center justify-center">
-                      <div class="md:hidden text-xs text-muted-foreground mb-1">
-                        5+ Years
-                      </div>
-                      <div class="text-2xl font-semibold text-foreground">
-                        $5,600<span
-                          class="text-base font-normal text-muted-foreground"
-                          >/mo</span
-                        >
-                      </div>
-                      <div class="text-sm text-muted-foreground">(-$1,600)</div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Toptal Card -->
-                <div
-                  class="flex-1 rounded-2xl border border-base-200 bg-background overflow-hidden"
-                >
-                  <!-- Logo Header -->
-                  <div
-                    class="p-6 flex items-center justify-center border-b border-base-200 h-[100px]"
-                  >
-                    <img
-                      src="/toptal-logo.webp"
-                      alt="Toptal"
-                      class="h-12 object-contain"
-                    />
-                  </div>
-                  <!-- Prices -->
-                  <div class="flex flex-col">
-                    <div
-                      class="h-24 flex flex-col items-center justify-center border-b border-base-100"
-                    >
-                      <div class="md:hidden text-xs text-muted-foreground mb-1">
-                        0-2 Years
-                      </div>
-                      <div class="text-2xl font-semibold text-foreground">
-                        $3,200<span
-                          class="text-base font-normal text-muted-foreground"
-                          >/mo</span
-                        >
-                      </div>
-                      <div class="text-sm text-muted-foreground">(-$1,700)</div>
-                    </div>
-                    <div
-                      class="h-24 flex flex-col items-center justify-center border-b border-base-100"
-                    >
-                      <div class="md:hidden text-xs text-muted-foreground mb-1">
-                        2-5 Years
-                      </div>
-                      <div class="text-2xl font-semibold text-foreground">
-                        $5,200<span
-                          class="text-base font-normal text-muted-foreground"
-                          >/mo</span
-                        >
-                      </div>
-                      <div class="text-sm text-muted-foreground">(-$2,200)</div>
-                    </div>
-                    <div class="h-24 flex flex-col items-center justify-center">
-                      <div class="md:hidden text-xs text-muted-foreground mb-1">
-                        5+ Years
-                      </div>
-                      <div class="text-2xl font-semibold text-foreground">
-                        $8,200<span
-                          class="text-base font-normal text-muted-foreground"
-                          >/mo</span
-                        >
-                      </div>
-                      <div class="text-sm text-muted-foreground">(-$4,200)</div>
-                    </div>
-                  </div>
-                </div>
+              <div class="p-6">
+                <div class="text-3xl font-bold text-primary mb-2">10+ Years</div>
+                <div class="text-muted-foreground">Combined team experience</div>
+              </div>
+              <div class="p-6">
+                <div class="text-3xl font-bold text-primary mb-2">100+</div>
+                <div class="text-muted-foreground">Integrations delivered</div>
               </div>
             </div>
 
@@ -552,7 +557,7 @@
                 href="#contact"
                 class="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-content font-semibold hover:bg-primary-focus transition-colors"
               >
-                Start Saving Today
+                Get a Free Consultation
               </a>
             </div>
           </div>
@@ -567,10 +572,10 @@
               <h2
                 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
               >
-                Simple as 1, 2, 3
+                How We Work
               </h2>
               <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Getting started with Cedar Devs is easy. Here's how it works.
+                Getting your systems connected is easier than you think. Here's our process.
               </p>
             </div>
 
@@ -604,12 +609,11 @@
                   </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-foreground mb-3">
-                  Tell Us Your Needs
+                  Discovery Call
                 </h3>
                 <p class="text-muted-foreground">
-                  Schedule a quick call with us to discuss your project
-                  requirements, tech stack, and the type of developer you're
-                  looking for.
+                  We learn about your current tech stack, pain points, and goals.
+                  What apps do you use? What data needs to flow where?
                 </p>
               </div>
 
@@ -637,16 +641,16 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                     />
                   </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-foreground mb-3">
-                  We Match You
+                  Solution Design
                 </h3>
                 <p class="text-muted-foreground">
-                  We hand-pick developers from our vetted talent pool that
-                  perfectly match your requirements and company culture.
+                  We design the integration architecture and provide a clear proposal.
+                  You'll know exactly what we'll build and how much it costs.
                 </p>
               </div>
 
@@ -671,16 +675,16 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
                     />
                   </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-foreground mb-3">
-                  Start Building
+                  Build & Deploy
                 </h3>
                 <p class="text-muted-foreground">
-                  Your new developer joins your team and starts contributing
-                  immediately. It's that simple.
+                  We build the integrations, test thoroughly, and deploy.
+                  Your apps start talking to each other — no downtime required.
                 </p>
               </div>
             </div>
@@ -688,10 +692,10 @@
             <!-- CTA -->
             <div class="text-center mt-16">
               <a
-                href="/get-started"
+                href="#contact"
                 class="inline-flex items-center justify-center px-8 py-3 rounded-full bg-secondary text-secondary-content font-semibold hover:bg-secondary-focus transition-colors"
               >
-                Get Started Now
+                Schedule Your Discovery Call
               </a>
             </div>
           </div>
@@ -715,11 +719,11 @@
               >Contact Us</span
             >
             <h2 class="text-4xl font-bold text-foreground mb-4">
-              Get in Touch
+              Let's Connect Your Apps
             </h2>
             <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ready to hire exceptional developers from Lebanon? Contact us
-              today and let's build something great together.
+              Ready to streamline your operations with smart integrations and AI?
+              Get in touch and let's discuss how we can help.
             </p>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -735,7 +739,7 @@
                   </div>
                   <div>
                     <h4 class="font-semibold text-foreground">Email Us</h4>
-                    <p class="text-primary">afawaz@cedardevs.com</p>
+                    <p class="text-primary">hello@techfa.io</p>
                   </div>
                 </div>
 
@@ -763,7 +767,7 @@
                 </p>
                 <div class="flex space-x-3">
                   <a
-                    href="https://www.linkedin.com/company/cedar-devs"
+                    href="#"
                     class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white hover:bg-primary-focus cursor-pointer transition-all duration-300"
                   >
                     <i class="fa-brands fa-linkedin-in text-lg"></i>
@@ -885,11 +889,11 @@
             <!-- Logo and Description -->
             <div class="md:col-span-2">
               <div class="flex items-center gap-3 mb-4">
-                <img src="/cedar-logo-full.png" alt="Cedar Devs" class="h-14" />
+                <span class="text-3xl font-bold text-white">Tech FA</span>
               </div>
               <p class="text-sm text-primary-200 leading-relaxed max-w-md">
-                Connecting you with exceptional software developers from
-                Lebanon. Quality talent, fair rates, real results.
+                Integrating your applications and supercharging them with AI.
+                No data migrations — we connect directly to your systems.
               </p>
             </div>
 
@@ -906,9 +910,9 @@
                 </li>
                 <li>
                   <a
-                    href="#pricing"
+                    href="#services"
                     class="text-primary-200 hover:text-white transition"
-                    >Pricing</a
+                    >Services</a
                   >
                 </li>
                 <li>
@@ -934,11 +938,7 @@
               <ul class="space-y-2">
                 <li class="text-primary-200">
                   <i class="fa-solid fa-envelope mr-2"></i>
-                  afawaz@cedardevs.com
-                </li>
-                <li class="text-primary-200">
-                  <i class="fa-solid fa-location-dot mr-2"></i>
-                  Lebanon
+                  hello@techfa.io
                 </li>
               </ul>
             </div>
@@ -947,7 +947,7 @@
           <div class="border-t border-primary-700 mt-12 pt-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
               <p class="text-sm mb-4 md:mb-0 text-primary-300">
-                © 2024 Cedar Devs. All rights reserved.
+                © 2025 Tech FA. All rights reserved.
               </p>
               <div class="flex space-x-4">
                 <a
@@ -958,7 +958,7 @@
                   ></i
                 ></a>
                 <a
-                  href="https://www.linkedin.com/company/cedar-devs"
+                  href="#"
                   class="w-10 h-10 bg-primary-800 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300"
                   ><i
                     class="fab fa-linkedin text-primary-200 hover:text-white"
@@ -1032,7 +1032,7 @@ const handleSubmit = async () => {
     // Send form data to API
     const response = await $fetch("/api/contact", {
       method: "POST",
-      body: { ...form.value, source: "cedardevs" },
+      body: { ...form.value, source: "techfa" },
     });
 
     if (response.status === 200) {
