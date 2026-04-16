@@ -12,7 +12,8 @@ useHead({
       crossorigin: 'anonymous',
       referrerpolicy: 'no-referrer'
     }
-  ]
+  ],
+  htmlAttrs: { lang: 'en' },
 })
 </script>
 

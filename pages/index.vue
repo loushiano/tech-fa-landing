@@ -7,28 +7,28 @@
       <div class="container flex h-16 items-center justify-between px-4">
         <div class="flex items-center gap-6">
           <a aria-label="Homepage" class="flex items-center gap-2" href="/">
-            <img src="/tech-fa-full.png" class="h-14" />
+            <img src="/tech-fa-full.png" class="h-14" alt="Tech FA" />
           </a>
           <nav class="hidden md:flex items-center gap-6">
             <a
               class="text-sm font-medium text-foreground hover:text-primary transition"
-              href="#why-us"
-              >Why Us</a
-            >
-            <a
-              class="text-sm font-medium text-foreground hover:text-primary transition"
-              href="#services"
-              >Services</a
-            >
-            <a
-              class="text-sm font-medium text-foreground hover:text-primary transition"
-              href="#integrations"
-              >Integrations</a
+              href="#solutions"
+              >Solutions</a
             >
             <a
               class="text-sm font-medium text-foreground hover:text-primary transition"
               href="#how-it-works"
               >How It Works</a
+            >
+            <a
+              class="text-sm font-medium text-foreground hover:text-primary transition"
+              href="#why-us"
+              >Why Us</a
+            >
+            <NuxtLink
+              class="text-sm font-medium text-foreground hover:text-primary transition"
+              to="/blogs"
+              >Blog</NuxtLink
             >
             <a
               class="text-sm font-medium text-foreground hover:text-primary transition"
@@ -41,10 +41,9 @@
           <a
             class="inline-flex items-center justify-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-content shadow-sm hover:bg-primary-focus h-10 px-6 rounded-full text-sm font-semibold"
             href="#contact"
-            >Get Started</a
+            >Get Started Free</a
           >
         </div>
-        <!-- Mobile Menu Button -->
         <button
           class="p-2 md:hidden"
           aria-label="Toggle menu"
@@ -83,7 +82,6 @@
           </svg>
         </button>
       </div>
-      <!-- Mobile Menu -->
       <div
         v-if="mobileMenuOpen"
         class="md:hidden bg-background border-t border-base-300"
@@ -91,27 +89,27 @@
         <nav class="flex flex-col p-4 gap-4">
           <a
             class="text-sm font-medium text-foreground hover:text-primary transition py-2"
-            href="#why-us"
+            href="#solutions"
             @click="mobileMenuOpen = false"
-            >Why Us</a
-          >
-          <a
-            class="text-sm font-medium text-foreground hover:text-primary transition py-2"
-            href="#services"
-            @click="mobileMenuOpen = false"
-            >Services</a
-          >
-          <a
-            class="text-sm font-medium text-foreground hover:text-primary transition py-2"
-            href="#integrations"
-            @click="mobileMenuOpen = false"
-            >Integrations</a
+            >Solutions</a
           >
           <a
             class="text-sm font-medium text-foreground hover:text-primary transition py-2"
             href="#how-it-works"
             @click="mobileMenuOpen = false"
             >How It Works</a
+          >
+          <a
+            class="text-sm font-medium text-foreground hover:text-primary transition py-2"
+            href="#why-us"
+            @click="mobileMenuOpen = false"
+            >Why Us</a
+          >
+          <NuxtLink
+            class="text-sm font-medium text-foreground hover:text-primary transition py-2"
+            to="/blogs"
+            @click="mobileMenuOpen = false"
+            >Blog</NuxtLink
           >
           <a
             class="text-sm font-medium text-foreground hover:text-primary transition py-2"
@@ -123,7 +121,7 @@
             class="inline-flex items-center justify-center bg-primary text-primary-content shadow-sm hover:bg-primary-focus h-10 px-6 rounded-full text-sm font-semibold mt-2"
             href="#contact"
             @click="mobileMenuOpen = false"
-            >Get Started</a
+            >Get Started Free</a
           >
         </nav>
       </div>
@@ -144,19 +142,26 @@
           <div
             class="flex w-full max-w-5xl flex-col space-y-6 overflow-hidden pt-8 px-4"
           >
+            <div class="hero-title flex justify-center">
+              <span
+                class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-2"
+                >AI-Powered Business Automation</span
+              >
+            </div>
             <h1
               class="hero-title text-center text-foreground font-semibold tracking-[-0.02em] text-[2.25rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] leading-tight"
             >
-              <span class="inline">Stop the Multiple Data Entry. </span>
-              <span class="inline">Connect Everything with </span>
-              <span class="inline text-primary">AI.</span>
+              <span class="inline">We Automate Your Business </span>
+              <span class="inline text-primary">Workflows </span>
+              <span class="inline">Using </span>
+              <span class="inline text-secondary">AI.</span>
             </h1>
             <p
               class="hero-subtitle text-center text-lg sm:text-xl text-muted-foreground mt-6 max-w-3xl mx-auto"
             >
-              We eliminate manual data entry between your platforms, reduce
-              errors, and automate workflows with AI so your team focuses on
-              what matters.
+              We specialize in automating business processes and workflows using
+              the newest AI technologies. We implement it for free, you
+              only pay for what you use.
             </p>
           </div>
           <div
@@ -169,7 +174,7 @@
                 <a
                   class="inline-flex items-center justify-center whitespace-nowrap text-sm font-semibold shadow h-12 rounded-full px-8 bg-primary hover:bg-primary-focus text-primary-content transition-all duration-300"
                   href="#contact"
-                  >Start Your Integration</a
+                  >Get Started Free</a
                 >
                 <a
                   class="inline-flex items-center justify-center whitespace-nowrap text-sm font-semibold h-12 rounded-full px-8 border-2 border-primary text-primary hover:bg-primary/5 transition-all duration-300"
@@ -177,39 +182,486 @@
                   >See How It Works</a
                 >
               </div>
+              <p class="text-sm text-muted-foreground">
+                Zero upfront cost &middot; Pay only per usage
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solutions / What We've Automated -->
+      <section id="solutions" class="py-20 bg-base-100">
+        <div class="container mx-auto px-4">
+          <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12" data-animate="fade-up">
+              <span
+                class="inline-block px-4 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium mb-4"
+                >Our Solutions</span
+              >
+              <h2
+                class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
+              >
+                AI Assistants We've Built
+              </h2>
+              <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Real AI solutions already automating work for businesses like
+                yours, with many more on the way.
+              </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+              <!-- Solution 1: Email Assistant -->
+              <div
+                class="rounded-2xl border-2 border-primary/20 bg-primary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                data-animate="fade-up"
+                data-animate-delay="1"
+              >
+                <div
+                  class="absolute top-4 right-4 px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold"
+                >
+                  Live
+                </div>
+                <div
+                  class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-7 h-7 text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-semibold text-foreground mb-3">
+                  AI Email Assistant
+                </h3>
+                <p class="text-muted-foreground mb-4">
+                  An intelligent email assistant that reads from your knowledge
+                  base, documents, and resources you feed it, then
+                  drafts accurate, on-brand replies automatically.
+                </p>
+                <ul class="space-y-2 text-muted-foreground">
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-primary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Learns from your docs, FAQs &amp; past emails
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-primary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Responds in your tone and voice
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-primary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Handles customer inquiries 24/7
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Solution 2: Inbound Missed Calls AI -->
+              <div
+                class="rounded-2xl border-2 border-secondary/20 bg-secondary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                data-animate="fade-up"
+                data-animate-delay="2"
+              >
+                <div
+                  class="absolute top-4 right-4 px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-semibold"
+                >
+                  Live
+                </div>
+                <div
+                  class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-6"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-7 h-7 text-secondary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-semibold text-foreground mb-3">
+                  AI Inbound Call Assistant
+                </h3>
+                <p class="text-muted-foreground mb-4">
+                  Never miss a business opportunity again. Our AI answers your
+                  inbound calls when you can't, handles inquiries, and captures
+                  every lead.
+                </p>
+                <ul class="space-y-2 text-muted-foreground">
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-secondary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Answers missed calls automatically
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-secondary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Natural conversation, not a robot
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-secondary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Captures leads &amp; schedules callbacks
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- More Coming Soon -->
+            <div
+              class="mt-8 rounded-2xl border-2 border-dashed border-base-300 bg-base-100 p-8 text-center"
+              data-animate="fade-up"
+              data-animate-delay="3"
+            >
+              <div
+                class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4 mx-auto"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-7 h-7 text-accent"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-foreground mb-2">
+                Many More Coming Soon
+              </h3>
+              <p class="text-muted-foreground max-w-lg mx-auto">
+                We're building new AI-powered automations every month,
+                from invoice processing to appointment scheduling.
+                <a
+                  href="#contact"
+                  class="text-primary font-semibold hover:underline"
+                  >Tell us what you need.</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section id="how-it-works" class="py-20 bg-background">
+        <div class="container mx-auto px-4">
+          <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16" data-animate="fade-up">
+              <span
+                class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+                >Simple Process</span
+              >
+              <h2
+                class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
+              >
+                How It Works
+              </h2>
+              <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Getting started is simple. Zero risk, zero upfront investment.
+              </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-0">
+              <!-- Step 1: Reach Out -->
+              <div
+                class="relative flex gap-6 md:gap-8 pb-12"
+                data-animate="fade-up"
+                data-animate-delay="1"
+              >
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-14 h-14 rounded-full bg-primary text-primary-content text-xl font-bold flex items-center justify-center flex-shrink-0 z-10"
+                  >
+                    1
+                  </div>
+                  <div class="w-0.5 flex-1 bg-primary/20 mt-3"></div>
+                </div>
+                <div class="pt-2 pb-4">
+                  <div
+                    class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-7 h-7 text-primary"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-semibold text-foreground mb-2">
+                    You Reach Out
+                  </h3>
+                  <p class="text-muted-foreground leading-relaxed">
+                    Send us a message or book a call. Tell us about your
+                    business and the manual processes that are slowing you down.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 2: We Analyze -->
+              <div
+                class="relative flex gap-6 md:gap-8 pb-12"
+                data-animate="fade-up"
+                data-animate-delay="2"
+              >
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-14 h-14 rounded-full bg-primary text-primary-content text-xl font-bold flex items-center justify-center flex-shrink-0 z-10"
+                  >
+                    2
+                  </div>
+                  <div class="w-0.5 flex-1 bg-primary/20 mt-3"></div>
+                </div>
+                <div class="pt-2 pb-4">
+                  <div
+                    class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-7 h-7 text-primary"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-semibold text-foreground mb-2">
+                    We Analyze Your Needs
+                  </h3>
+                  <p class="text-muted-foreground leading-relaxed">
+                    We study your workflows, identify bottlenecks, and figure
+                    out exactly where AI and automation can save you the most
+                    time and money.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 3: We Implement Free -->
+              <div
+                class="relative flex gap-6 md:gap-8 pb-12"
+                data-animate="fade-up"
+                data-animate-delay="3"
+              >
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-14 h-14 rounded-full bg-primary text-primary-content text-xl font-bold flex items-center justify-center flex-shrink-0 z-10"
+                  >
+                    3
+                  </div>
+                  <div class="w-0.5 flex-1 bg-primary/20 mt-3"></div>
+                </div>
+                <div class="pt-2 pb-4">
+                  <div
+                    class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-7 h-7 text-primary"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-semibold text-foreground mb-2">
+                    We Build &amp; Deploy for Free
+                  </h3>
+                  <p class="text-muted-foreground leading-relaxed">
+                    We design, build, and deploy your custom AI automation at no
+                    cost. You don't pay a cent until the solution is live and
+                    working.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 4: Pay Per Usage -->
+              <div
+                class="relative flex gap-6 md:gap-8"
+                data-animate="fade-up"
+                data-animate-delay="4"
+              >
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-14 h-14 rounded-full bg-secondary text-secondary-content text-xl font-bold flex items-center justify-center flex-shrink-0 z-10"
+                  >
+                    4
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <div
+                    class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-4"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-7 h-7 text-secondary"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-semibold text-foreground mb-2">
+                    You Pay Only Per Usage
+                  </h3>
+                  <p class="text-muted-foreground leading-relaxed">
+                    No subscriptions, no surprises. You only pay based on how
+                    much the automation runs. The more value it delivers, the
+                    more you save.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-16" data-animate="fade-up">
               <a
-                class="flex items-center gap-1 text-sm font-medium py-1 relative group transition-all duration-300 text-muted-foreground hover:text-foreground"
                 href="#contact"
-                ><span>Questions? Let's talk</span>
-                <span
-                  class="absolute bottom-0 left-0 right-0 h-px bg-current transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
-                ></span>
+                class="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-content font-semibold hover:bg-primary-focus transition-colors"
+              >
+                Start Your Free Automation
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Why Us / Value Props -->
+      <!-- Why Us -->
       <section id="why-us" class="py-20 bg-base-100">
         <div class="container mx-auto px-4">
           <div class="max-w-5xl mx-auto">
             <div class="text-center" data-animate="fade-up">
+              <span
+                class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+                >Why Tech FA</span
+              >
               <h2
                 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
               >
-                Why Companies Choose Us
+                Why Businesses Choose Us
               </h2>
               <p
                 class="text-lg text-muted-foreground max-w-2xl mx-auto mb-12"
               >
-                We connect your platforms, eliminate redundant work, and let AI
-                handle the rest.
+                We take the risk so you don't have to. Free implementation,
+                pay-per-use pricing, and cutting-edge AI.
               </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
-              <!-- Card 1: Save Time -->
+              <!-- Card 1: Zero Upfront Cost -->
               <div
                 class="bg-background rounded-2xl p-8 border border-base-300 hover:shadow-lg transition-all duration-300"
                 data-animate="fade-up"
@@ -229,21 +681,21 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"
                     />
                   </svg>
                 </div>
                 <h3 class="text-2xl font-semibold text-foreground mb-3">
-                  Save 20+ Hours/Week
+                  Zero Upfront Cost
                 </h3>
                 <p class="text-muted-foreground leading-relaxed">
-                  Eliminate manual data entry between systems. Information flows
-                  automatically between your platforms in real time, no more
-                  copying and pasting between apps.
+                  We build and deploy your AI automation completely free. No
+                  setup fees, no development charges. You only pay when the
+                  automation is live and delivering results.
                 </p>
               </div>
 
-              <!-- Card 2: Reduce Errors -->
+              <!-- Card 2: Pay Per Usage -->
               <div
                 class="bg-background rounded-2xl p-8 border border-base-300 hover:shadow-lg transition-all duration-300"
                 data-animate="fade-up"
@@ -263,21 +715,21 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                      d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
                     />
                   </svg>
                 </div>
                 <h3 class="text-2xl font-semibold text-foreground mb-3">
-                  Reduce Errors by 90%
+                  Pay Only for What You Use
                 </h3>
                 <p class="text-muted-foreground leading-relaxed">
-                  Manual re-entry causes costly mistakes. Automated syncing
-                  ensures data accuracy across every system, from invoices to
-                  inventory to payroll.
+                  No monthly subscriptions or hidden fees. Our usage-based
+                  pricing means you pay proportionally to the value delivered.
+                  If it doesn't run, you don't pay.
                 </p>
               </div>
 
-              <!-- Card 3: AI Automation -->
+              <!-- Card 3: Cutting-Edge AI -->
               <div
                 class="bg-background rounded-2xl p-8 border border-base-300 hover:shadow-lg transition-all duration-300"
                 data-animate="fade-up"
@@ -302,16 +754,16 @@
                   </svg>
                 </div>
                 <h3 class="text-2xl font-semibold text-foreground mb-3">
-                  AI-Powered Automation
+                  Newest AI Technologies
                 </h3>
                 <p class="text-muted-foreground leading-relaxed">
-                  Intelligent workflows that learn your patterns. From document
-                  processing to predictive analytics, AI handles the heavy
-                  lifting so your team doesn't have to.
+                  We use the latest in AI and machine learning to build
+                  solutions that are smarter, faster, and more reliable. Your
+                  business stays ahead of the curve.
                 </p>
               </div>
 
-              <!-- Card 4: Connect Platforms -->
+              <!-- Card 4: Tailored to You -->
               <div
                 class="bg-background rounded-2xl p-8 border border-base-300 hover:shadow-lg transition-all duration-300"
                 data-animate="fade-up"
@@ -331,574 +783,46 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                      d="M11.42 15.17l-5.384 3.07a.75.75 0 01-1.088-.791l1.028-5.993-4.355-4.244a.75.75 0 01.416-1.28l6.016-.874L10.69 0a.75.75 0 011.342 0l2.689 5.452 6.015.874a.75.75 0 01.416 1.28l-4.355 4.244 1.028 5.993a.75.75 0 01-1.088.791L11.42 15.17z"
                     />
                   </svg>
                 </div>
                 <h3 class="text-2xl font-semibold text-foreground mb-3">
-                  Connect Any Platform
+                  Tailored to Your Business
                 </h3>
                 <p class="text-muted-foreground leading-relaxed">
-                  We integrate with 50+ platforms across finance, operations,
-                  HR, and CRM. If it has an API, we can connect it, no data
-                  migrations required.
+                  No cookie-cutter templates. Every automation we build is
+                  custom-designed for your specific workflows, tools, and team.
+                  It fits like a glove.
                 </p>
               </div>
-            </div>
-
-            <!-- Stats -->
-            <div
-              class="mt-16 grid grid-cols-3 gap-6 text-center"
-              data-animate="fade-up"
-            >
-              <div class="p-6">
-                <div class="text-3xl font-bold text-primary mb-2">90%</div>
-                <div class="text-muted-foreground">Error Reduction</div>
-              </div>
-              <div class="p-6">
-                <div class="text-3xl font-bold text-primary mb-2">20+ hrs</div>
-                <div class="text-muted-foreground">Saved Per Week</div>
-              </div>
-              <div class="p-6">
-                <div class="text-3xl font-bold text-primary mb-2">50+</div>
-                <div class="text-muted-foreground">Platforms Connected</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Integration Partners -->
-      <section id="integrations" class="py-20 bg-background">
-        <div class="container mx-auto px-4">
-          <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16" data-animate="fade-up">
-              <h2
-                class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
-              >
-                We Integrate With the Tools You Already Use
-              </h2>
-              <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                50+ platforms across finance, operations, HR, and CRM, connected seamlessly.
-              </p>
-            </div>
-
-            <div class="space-y-12">
-              <div
-                v-for="(category, catIndex) in integrationCategories"
-                :key="category.label"
-                data-animate="fade-up"
-                :data-animate-delay="catIndex + 1"
-              >
-                <h3
-                  class="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-6 text-center"
-                >
-                  {{ category.label }}
-                </h3>
-                <div
-                  class="flex flex-wrap justify-center items-center gap-8 md:gap-12"
-                >
-                  <div
-                    v-for="logo in category.logos"
-                    :key="logo.slug"
-                    class="group flex flex-col items-center gap-2"
-                  >
-                    <div
-                      class="w-16 h-16 flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-                    >
-                      <img
-                        :src="`https://cdn.simpleicons.org/${logo.slug}/${logo.color}`"
-                        :alt="logo.name"
-                        class="w-10 h-10"
-                        loading="lazy"
-                        @error="(e) => (e.target.style.display = 'none')"
-                      />
-                    </div>
-                    <span class="text-xs text-muted-foreground font-medium">{{
-                      logo.name
-                    }}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-center mt-12" data-animate="fade-up">
-              <p class="text-muted-foreground">
-                Don't see your platform?
-                <a
-                  href="#contact"
-                  class="text-primary font-semibold hover:underline"
-                  >We can connect it.</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services -->
-      <section id="services" class="py-20 bg-base-100">
-        <div class="container mx-auto px-4">
-          <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-12" data-animate="fade-up">
-              <h2
-                class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
-              >
-                What We Deliver
-              </h2>
-              <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                End-to-end integration and automation services for modern
-                businesses.
-              </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-              <!-- Service 1: Integration -->
-              <div
-                class="rounded-2xl border-2 border-primary/20 bg-primary/5 p-8 hover:shadow-lg transition-all duration-300"
-                data-animate="fade-up"
-                data-animate-delay="1"
-              >
-                <div
-                  class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-7 h-7 text-primary"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                    />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-semibold text-foreground mb-3">
-                  Integration Services
-                </h3>
-                <p class="text-muted-foreground mb-4">
-                  Connect your CRM, ERP, accounting, and HR platforms into one
-                  seamless ecosystem. Data flows where it needs to, automatically.
-                </p>
-                <ul class="space-y-2 text-muted-foreground">
-                  <li class="flex items-center gap-2">
-                    <svg
-                      class="w-5 h-5 text-primary flex-shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    Real-time bi-directional sync
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <svg
-                      class="w-5 h-5 text-primary flex-shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    Custom API development
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <svg
-                      class="w-5 h-5 text-primary flex-shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    Legacy system connectors
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Service 2: AI Automation -->
-              <div
-                class="rounded-2xl border-2 border-secondary/20 bg-secondary/5 p-8 hover:shadow-lg transition-all duration-300"
-                data-animate="fade-up"
-                data-animate-delay="2"
-              >
-                <div
-                  class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-6"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-7 h-7 text-secondary"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                    />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-semibold text-foreground mb-3">
-                  AI Workflow Automation
-                </h3>
-                <p class="text-muted-foreground mb-4">
-                  Automate repetitive tasks with intelligent workflows that
-                  adapt to your business and get smarter over time.
-                </p>
-                <ul class="space-y-2 text-muted-foreground">
-                  <li class="flex items-center gap-2">
-                    <svg
-                      class="w-5 h-5 text-secondary flex-shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    Document processing & extraction
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <svg
-                      class="w-5 h-5 text-secondary flex-shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    Smart routing & approvals
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <svg
-                      class="w-5 h-5 text-secondary flex-shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    Chatbots & virtual assistants
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Service 3: Analytics -->
-              <div
-                class="rounded-2xl border-2 border-primary/20 bg-primary/5 p-8 hover:shadow-lg transition-all duration-300"
-                data-animate="fade-up"
-                data-animate-delay="3"
-              >
-                <div
-                  class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-7 h-7 text-primary"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                    />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-semibold text-foreground mb-3">
-                  Analytics & Reporting
-                </h3>
-                <p class="text-muted-foreground mb-4">
-                  Unified reporting across all your connected systems. One
-                  source of truth for better decision-making.
-                </p>
-                <ul class="space-y-2 text-muted-foreground">
-                  <li class="flex items-center gap-2">
-                    <svg
-                      class="w-5 h-5 text-primary flex-shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    Cross-platform dashboards
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <svg
-                      class="w-5 h-5 text-primary flex-shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    Real-time data aggregation
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <svg
-                      class="w-5 h-5 text-primary flex-shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    Custom KPI tracking
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- CTA -->
-            <div class="text-center mt-12" data-animate="fade-up">
-              <a
-                href="#contact"
-                class="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-content font-semibold hover:bg-primary-focus transition-colors"
-              >
-                Get a Free Consultation
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- How It Works -->
-      <section id="how-it-works" class="py-20 bg-background">
-        <div class="container mx-auto px-4">
-          <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16" data-animate="fade-up">
-              <h2
-                class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
-              >
-                How We Work
-              </h2>
-              <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Getting your systems connected is easier than you think. Here's
-                our process.
-              </p>
-            </div>
-
-            <div class="max-w-3xl mx-auto space-y-0">
-              <!-- Step 1 -->
-              <div
-                class="relative flex gap-6 md:gap-8 pb-12"
-                data-animate="fade-up"
-                data-animate-delay="1"
-              >
-                <!-- Timeline connector -->
-                <div class="flex flex-col items-center">
-                  <div
-                    class="w-14 h-14 rounded-full bg-primary text-primary-content text-xl font-bold flex items-center justify-center flex-shrink-0 z-10"
-                  >
-                    1
-                  </div>
-                  <div class="w-0.5 flex-1 bg-primary/20 mt-3"></div>
-                </div>
-                <!-- Content -->
-                <div class="pt-2 pb-4">
-                  <div
-                    class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4"
-                  >
-                    <!-- Magnifying glass / Search icon -->
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-7 h-7 text-primary"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                      />
-                    </svg>
-                  </div>
-                  <h3 class="text-xl font-semibold text-foreground mb-2">
-                    Discovery Call
-                  </h3>
-                  <p class="text-muted-foreground leading-relaxed">
-                    We map your current systems, identify bottlenecks, and
-                    pinpoint where automation saves you the most time.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Step 2 -->
-              <div
-                class="relative flex gap-6 md:gap-8 pb-12"
-                data-animate="fade-up"
-                data-animate-delay="2"
-              >
-                <div class="flex flex-col items-center">
-                  <div
-                    class="w-14 h-14 rounded-full bg-primary text-primary-content text-xl font-bold flex items-center justify-center flex-shrink-0 z-10"
-                  >
-                    2
-                  </div>
-                  <div class="w-0.5 flex-1 bg-primary/20 mt-3"></div>
-                </div>
-                <div class="pt-2 pb-4">
-                  <div
-                    class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4"
-                  >
-                    <!-- Puzzle piece / Blueprint icon -->
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-7 h-7 text-primary"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.421 48.421 0 01-4.185-.194M14.25 6.087c0 .662.636 1.163 1.25.98 1.64-.487 3.16-1.14 4.543-1.942a.727.727 0 00.207-1.066 48.3 48.3 0 00-4.813-5.14.727.727 0 00-1.087.207 48.423 48.423 0 01-1.942 4.543c.183.614.684 1.25 1.25 1.25h.592M14.25 6.087l-.592.008M6.358 5.893c-.614.183-1.25.684-1.25 1.25v.592m0 0c0 .355-.186.676-.401.959a1.647 1.647 0 00-.349 1.003c0 1.035 1.007 1.875 2.25 1.875s2.25-.84 2.25-1.875c0-.369-.128-.713-.349-1.003-.215-.283-.401-.604-.401-.959v0c0-.354.285-.64.643-.657a48.421 48.421 0 014.185-.194m0 0v.008m0-.008c0-.662-.636-1.163-1.25-.98a48.423 48.423 0 00-4.543 1.942.727.727 0 00-.207 1.066 48.3 48.3 0 004.813 5.14.727.727 0 001.087-.207 48.423 48.423 0 001.942-4.543c-.183-.614-.684-1.25-1.25-1.25h-.592"
-                      />
-                    </svg>
-                  </div>
-                  <h3 class="text-xl font-semibold text-foreground mb-2">
-                    Solution Design
-                  </h3>
-                  <p class="text-muted-foreground leading-relaxed">
-                    We architect the integration plan, select the right
-                    connectors, and provide a transparent fixed-price proposal.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Step 3 -->
-              <div
-                class="relative flex gap-6 md:gap-8"
-                data-animate="fade-up"
-                data-animate-delay="3"
-              >
-                <div class="flex flex-col items-center">
-                  <div
-                    class="w-14 h-14 rounded-full bg-primary text-primary-content text-xl font-bold flex items-center justify-center flex-shrink-0 z-10"
-                  >
-                    3
-                  </div>
-                </div>
-                <div class="pt-2">
-                  <div
-                    class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4"
-                  >
-                    <!-- Rocket icon -->
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-7 h-7 text-primary"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
-                      />
-                    </svg>
-                  </div>
-                  <h3 class="text-xl font-semibold text-foreground mb-2">
-                    Build & Deploy
-                  </h3>
-                  <p class="text-muted-foreground leading-relaxed">
-                    We build, test, and deploy your integrations. Your systems
-                    start syncing automatically, zero downtime required.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- CTA -->
-            <div class="text-center mt-16" data-animate="fade-up">
-              <a
-                href="#contact"
-                class="inline-flex items-center justify-center px-8 py-3 rounded-full bg-secondary text-secondary-content font-semibold hover:bg-secondary-focus transition-colors"
-              >
-                Schedule Your Discovery Call
-              </a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Testimonials -->
-      <section class="py-20 bg-base-100">
+      <section class="py-20 bg-background">
         <div class="container mx-auto px-4">
           <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12" data-animate="fade-up">
+              <span
+                class="inline-block px-4 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium mb-4"
+                >Testimonials</span
+              >
               <h2
                 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
               >
                 What Our Clients Say
               </h2>
               <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Real results from real businesses we've helped transform.
+                Real results from real businesses we've helped automate.
               </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
-              <!-- Testimonial 1: Pat / NHC 24/7 -->
               <div
-                class="bg-background rounded-2xl p-8 border border-base-300 shadow-sm"
+                class="bg-base-100 rounded-2xl p-8 border border-base-300 shadow-sm"
                 data-animate="fade-up"
                 data-animate-delay="1"
               >
@@ -938,9 +862,8 @@
                 </div>
               </div>
 
-              <!-- Testimonial 2: Darryl / Optimum -->
               <div
-                class="bg-background rounded-2xl p-8 border border-base-300 shadow-sm"
+                class="bg-base-100 rounded-2xl p-8 border border-base-300 shadow-sm"
                 data-animate="fade-up"
                 data-animate-delay="2"
               >
@@ -984,6 +907,98 @@
         </div>
       </section>
 
+      <!-- Blog Section -->
+      <section id="blog" class="py-20 bg-base-100">
+        <div class="container mx-auto px-4">
+          <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12" data-animate="fade-up">
+              <span
+                class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+                >Our Blog</span
+              >
+              <h2
+                class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
+              >
+                Latest Insights
+              </h2>
+              <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                AI trends, automation strategies, and practical advice for
+                modern businesses.
+              </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+              <NuxtLink
+                v-for="post in blogPosts"
+                :key="post.slug"
+                :to="`/blog/${post.slug}`"
+                class="group bg-background rounded-2xl border border-base-300 overflow-hidden hover:shadow-lg transition-all duration-300"
+                data-animate="fade-up"
+              >
+                <div
+                  class="h-48 relative overflow-hidden"
+                  :class="post.gradient"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center"
+                  >
+                    <div class="text-center text-white">
+                      <div class="text-4xl mb-2">{{ post.icon }}</div>
+                      <div class="text-sm font-medium opacity-90">
+                        {{ post.category }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <div class="flex items-center gap-2 mb-3">
+                    <span
+                      class="text-xs font-medium text-primary bg-primary/10 px-2 py-0.5 rounded-full"
+                      >{{ post.category }}</span
+                    >
+                    <span class="text-xs text-muted-foreground">{{
+                      post.date
+                    }}</span>
+                  </div>
+                  <h3
+                    class="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2"
+                  >
+                    {{ post.title }}
+                  </h3>
+                  <p
+                    class="text-sm text-muted-foreground line-clamp-2"
+                  >
+                    {{ post.excerpt }}
+                  </p>
+                </div>
+              </NuxtLink>
+            </div>
+
+            <div class="text-center mt-12" data-animate="fade-up">
+              <NuxtLink
+                to="/blogs"
+                class="inline-flex items-center justify-center px-8 py-3 rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary/5 transition-colors"
+              >
+                View All Posts
+                <svg
+                  class="w-4 h-4 ml-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Contact -->
       <section
         id="contact"
@@ -1002,11 +1017,11 @@
               >Contact Us</span
             >
             <h2 class="text-4xl font-bold text-foreground mb-4">
-              Let's Connect Your Apps
+              Let's Automate Your Workflows
             </h2>
             <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ready to eliminate double data entry and automate your workflows?
-              Get in touch and let's discuss how we can help.
+              Ready to eliminate manual work and let AI handle the heavy
+              lifting? Reach out and we'll analyze your needs for free.
             </p>
           </div>
           <div
@@ -1049,6 +1064,65 @@
                     </p>
                   </div>
                 </div>
+
+                <div
+                  class="bg-primary/5 border border-primary/20 rounded-2xl p-5"
+                >
+                  <div class="flex items-center gap-3 mb-2">
+                    <svg
+                      class="w-5 h-5 text-primary"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span class="text-foreground font-medium"
+                      >Free implementation</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-3 mb-2">
+                    <svg
+                      class="w-5 h-5 text-primary"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span class="text-foreground font-medium"
+                      >Pay only per usage</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      class="w-5 h-5 text-primary"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span class="text-foreground font-medium"
+                      >No long-term contracts</span
+                    >
+                  </div>
+                </div>
               </div>
               <div class="mt-8">
                 <p class="mb-4 text-muted-foreground font-medium">
@@ -1058,20 +1132,17 @@
                   <a
                     href="https://www.linkedin.com/company/tech-fa"
                     class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white hover:bg-primary-focus cursor-pointer transition-all duration-300"
+                    target="_blank"
+                    aria-label="LinkedIn"
                   >
                     <i class="fa-brands fa-linkedin-in text-lg"></i>
                   </a>
                   <a
                     href="#"
                     class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white hover:bg-primary-focus cursor-pointer transition-all duration-300"
+                    aria-label="Twitter"
                   >
                     <i class="fa-brands fa-twitter text-lg"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-white hover:bg-secondary-focus cursor-pointer transition-all duration-300"
-                  >
-                    <i class="fa-brands fa-github text-lg"></i>
                   </a>
                 </div>
               </div>
@@ -1139,7 +1210,7 @@
                       rows="4"
                       v-model="form.message"
                       class="w-full p-4 bg-background border border-base-300 rounded-xl text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
-                      placeholder="Tell us about your project"
+                      placeholder="Tell us about the workflows you'd like to automate"
                       required
                     ></textarea>
                   </div>
@@ -1179,14 +1250,13 @@
           <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div class="md:col-span-2">
               <div class="flex items-center gap-3 mb-4">
-                <img src="/tech-fa-full.png" class="h-14" />
+                <img src="/tech-fa-full.png" class="h-14" alt="Tech FA" />
               </div>
               <p
                 class="text-sm text-muted-foreground leading-relaxed max-w-md"
               >
-                Eliminating double data entry, connecting your platforms, and
-                supercharging them with AI. No data migrations, we connect
-                directly to your systems.
+                We automate your business workflows using the newest AI
+                technologies. Free implementation, pay only per usage.
               </p>
             </div>
 
@@ -1195,23 +1265,9 @@
               <ul class="space-y-2">
                 <li>
                   <a
-                    href="#why-us"
+                    href="#solutions"
                     class="text-muted-foreground hover:text-primary transition"
-                    >Why Us</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#services"
-                    class="text-muted-foreground hover:text-primary transition"
-                    >Services</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#integrations"
-                    class="text-muted-foreground hover:text-primary transition"
-                    >Integrations</a
+                    >Solutions</a
                   >
                 </li>
                 <li>
@@ -1219,6 +1275,20 @@
                     href="#how-it-works"
                     class="text-muted-foreground hover:text-primary transition"
                     >How It Works</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#why-us"
+                    class="text-muted-foreground hover:text-primary transition"
+                    >Why Us</a
+                  >
+                </li>
+                <li>
+                  <NuxtLink
+                    to="/blogs"
+                    class="text-muted-foreground hover:text-primary transition"
+                    >Blog</NuxtLink
                   >
                 </li>
                 <li>
@@ -1253,6 +1323,7 @@
                 <a
                   href="#"
                   class="w-10 h-10 bg-base-200 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300"
+                  aria-label="Twitter"
                   ><i
                     class="fab fa-twitter text-muted-foreground hover:text-primary-content"
                   ></i
@@ -1260,15 +1331,9 @@
                 <a
                   href="https://www.linkedin.com/company/tech-fa"
                   class="w-10 h-10 bg-base-200 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300"
+                  aria-label="LinkedIn"
                   ><i
                     class="fab fa-linkedin text-muted-foreground hover:text-primary-content"
-                  ></i
-                ></a>
-                <a
-                  href="#"
-                  class="w-10 h-10 bg-base-200 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300"
-                  ><i
-                    class="fab fa-github text-muted-foreground hover:text-primary-content"
                   ></i
                 ></a>
               </div>
@@ -1282,6 +1347,58 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+
+useSeoMeta({
+  title: "Tech FA | AI-Powered Business Workflow Automation",
+  ogTitle: "Tech FA | AI-Powered Business Workflow Automation",
+  description:
+    "We automate your business processes and workflows using the newest AI technologies. Free implementation — you only pay per usage. AI email assistant, inbound call AI, and more.",
+  ogDescription:
+    "We automate your business processes and workflows using the newest AI technologies. Free implementation — you only pay per usage.",
+  ogImage: "/tech-fa-full.png",
+  ogUrl: "https://tech-fa.ca",
+  ogType: "website",
+  ogSiteName: "Tech FA",
+  twitterCard: "summary_large_image",
+  twitterTitle: "Tech FA | AI-Powered Business Workflow Automation",
+  twitterDescription:
+    "We automate your business workflows using AI. Free implementation, pay only per usage.",
+  robots: "index, follow",
+});
+
+useHead({
+  htmlAttrs: { lang: "en" },
+  link: [{ rel: "canonical", href: "https://tech-fa.ca" }],
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Tech FA",
+        url: "https://tech-fa.ca",
+        logo: "https://tech-fa.ca/tech-fa-full.png",
+        description:
+          "We automate your business processes and workflows using the newest AI technologies. Free implementation — you only pay per usage.",
+        contactPoint: {
+          "@type": "ContactPoint",
+          email: "ali@tech-fa.ca",
+          contactType: "sales",
+        },
+        sameAs: ["https://www.linkedin.com/company/tech-fa"],
+      }),
+    },
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "Tech FA",
+        url: "https://tech-fa.ca",
+      }),
+    },
+  ],
+});
 
 const mobileMenuOpen = ref(false);
 const form = ref({
@@ -1297,36 +1414,37 @@ const submitStatus = ref({
   message: "",
 });
 
-const integrationCategories = ref([
+const blogPosts = ref([
   {
-    label: "Finance & Accounting",
-    logos: [
-      { name: "QuickBooks", slug: "quickbooks", color: "2CA01C" },
-      { name: "Xero", slug: "xero", color: "13B5EA" },
-      { name: "Sage", slug: "sage", color: "00D639" },
-      { name: "Intuit", slug: "intuit", color: "0075DD" },
-    ],
+    slug: "smart-software-solutions-backbone-modern-business",
+    title:
+      "Why Smart Software Solutions Are the Backbone of Modern Business",
+    excerpt:
+      "Real problems companies face every day — slow workflows, costly errors, and disconnected systems.",
+    date: "Jan 11, 2025",
+    category: "AI & Automation",
+    icon: "🧠",
+    gradient: "bg-gradient-to-br from-blue-500 to-purple-600",
   },
   {
-    label: "Operations & ERP",
-    logos: [
-      { name: "SAP", slug: "sap", color: "0FAAFF" },
-      { name: "Odoo", slug: "odoo", color: "714B67" },
-    ],
+    slug: "turning-data-into-actionable-business-intelligence",
+    title: "Turning Data Into Actionable Business Intelligence",
+    excerpt:
+      "How modern businesses leverage AI-powered analytics to make smarter decisions and predict trends.",
+    date: "Coming Soon",
+    category: "Analytics",
+    icon: "📊",
+    gradient: "bg-gradient-to-br from-green-500 to-teal-600",
   },
   {
-    label: "HR & Payroll",
-    logos: [
-      { name: "ADP", slug: "adp", color: "D0271D" },
-      { name: "Gusto", slug: "gusto", color: "F45D48" },
-    ],
-  },
-  {
-    label: "CRM & Sales",
-    logos: [
-      { name: "HubSpot", slug: "hubspot", color: "FF7A59" },
-      { name: "Zoho", slug: "zoho", color: "C8202B" },
-    ],
+    slug: "complete-guide-workflow-automation",
+    title: "The Complete Guide to Workflow Automation",
+    excerpt:
+      "Learn how to identify automation opportunities and measure the ROI of your initiatives.",
+    date: "Coming Soon",
+    category: "Automation",
+    icon: "🤖",
+    gradient: "bg-gradient-to-br from-orange-500 to-red-600",
   },
 ]);
 
@@ -1369,7 +1487,6 @@ const handleSubmit = async () => {
 };
 
 onMounted(() => {
-  // Smooth Scrolling for Navigation Links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -1384,7 +1501,6 @@ onMounted(() => {
     });
   });
 
-  // Scroll-triggered animations with Intersection Observer
   const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
@@ -1406,7 +1522,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Hero Animations (immediate, no observer) */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1430,7 +1545,6 @@ onMounted(() => {
   animation: fadeInUp 0.8s ease-out 0.6s both;
 }
 
-/* Scroll-triggered animations */
 [data-animate] {
   opacity: 0;
   transform: translateY(30px);
@@ -1458,7 +1572,6 @@ onMounted(() => {
   transform: translateY(0) translateX(0);
 }
 
-/* Stagger delays */
 [data-animate-delay="1"] {
   transition-delay: 0.1s;
 }
@@ -1473,5 +1586,12 @@ onMounted(() => {
 }
 [data-animate-delay="5"] {
   transition-delay: 0.5s;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 </style>
