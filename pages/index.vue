@@ -210,7 +210,7 @@
               </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <!-- Solution 1: Email Assistant -->
               <div
                 class="rounded-2xl border-2 border-primary/20 bg-primary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
@@ -388,13 +388,389 @@
                   </li>
                 </ul>
               </div>
+
+              <!-- Solution 3: Telegram AI Assistant -->
+              <div
+                class="rounded-2xl border-2 border-primary/20 bg-primary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                data-animate="fade-up"
+                data-animate-delay="3"
+              >
+                <div
+                  class="absolute top-4 right-4 px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold"
+                >
+                  Workflow
+                </div>
+                <div
+                  class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6"
+                >
+                  <i class="fa-brands fa-telegram text-primary text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-foreground mb-3">
+                  Telegram AI Assistant
+                </h3>
+                <p class="text-muted-foreground mb-4">
+                  Automate Telegram conversations with an AI assistant that
+                  answers questions, qualifies leads, and routes urgent messages
+                  to your team.
+                </p>
+                <ul class="space-y-2 text-muted-foreground">
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-primary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Replies instantly inside Telegram chats
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-primary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Qualifies leads and captures details
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-primary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Escalates important messages to staff
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Solution 4: Google Review AI Assistant -->
+              <div
+                class="rounded-2xl border-2 border-secondary/20 bg-secondary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                data-animate="fade-up"
+                data-animate-delay="4"
+              >
+                <div
+                  class="absolute top-4 right-4 px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-semibold"
+                >
+                  Workflow
+                </div>
+                <div
+                  class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-6"
+                >
+                  <i class="fa-brands fa-google text-secondary text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-foreground mb-3">
+                  Google Review AI Assistant
+                </h3>
+                <p class="text-muted-foreground mb-4">
+                  Monitor Google reviews, draft professional responses, and
+                  alert your team when feedback needs a human follow-up.
+                </p>
+                <ul class="space-y-2 text-muted-foreground">
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-secondary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Drafts on-brand review replies
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-secondary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Flags negative or urgent feedback
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-secondary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Helps protect your online reputation
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Solution 5: Instagram Messaging AI Assistant -->
+              <div
+                class="rounded-2xl border-2 border-primary/20 bg-primary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                data-animate="fade-up"
+                data-animate-delay="5"
+              >
+                <div
+                  class="absolute top-4 right-4 px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold"
+                >
+                  Workflow
+                </div>
+                <div
+                  class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6"
+                >
+                  <i class="fa-brands fa-instagram text-primary text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-foreground mb-3">
+                  Instagram Messaging AI Assistant
+                </h3>
+                <p class="text-muted-foreground mb-4">
+                  Turn Instagram DMs into a reliable sales and support channel
+                  with automated answers, lead capture, and follow-ups.
+                </p>
+                <ul class="space-y-2 text-muted-foreground">
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-primary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Answers common DM questions
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-primary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Captures customer intent and contact info
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-primary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Keeps conversations moving after hours
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Solution 6: Facebook Marketplace AI Assistant -->
+              <div
+                class="rounded-2xl border-2 border-secondary/20 bg-secondary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                data-animate="fade-up"
+                data-animate-delay="6"
+              >
+                <div
+                  class="absolute top-4 right-4 px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-semibold"
+                >
+                  Workflow
+                </div>
+                <div
+                  class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-6"
+                >
+                  <i class="fa-brands fa-facebook text-secondary text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-foreground mb-3">
+                  Facebook Marketplace AI Assistant
+                </h3>
+                <p class="text-muted-foreground mb-4">
+                  Manage Marketplace inquiries faster with AI that responds to
+                  buyers, shares listing details, and helps schedule next steps.
+                </p>
+                <ul class="space-y-2 text-muted-foreground">
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-secondary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Responds to buyer inquiries quickly
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-secondary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Shares pricing, availability, and details
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-secondary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Helps book viewings and handoffs
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Solution 7: Social Media Content Automation -->
+              <div
+                class="rounded-2xl border-2 border-primary/20 bg-primary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                data-animate="fade-up"
+                data-animate-delay="7"
+              >
+                <div
+                  class="absolute top-4 right-4 px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold"
+                >
+                  Workflow
+                </div>
+                <div
+                  class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6"
+                >
+                  <i class="fa-solid fa-wand-magic-sparkles text-primary text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-foreground mb-3">
+                  Social Media Content Automation
+                </h3>
+                <p class="text-muted-foreground mb-4">
+                  Plan, draft, and repurpose social content with AI workflows
+                  that keep your brand active across the platforms that matter.
+                </p>
+                <ul class="space-y-2 text-muted-foreground">
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-primary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Generates post ideas and captions
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-primary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Repurposes one idea across channels
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-primary flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Maintains a consistent posting rhythm
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <!-- More Coming Soon -->
             <div
               class="mt-8 rounded-2xl border-2 border-dashed border-base-300 bg-base-100 p-8 text-center"
               data-animate="fade-up"
-              data-animate-delay="3"
+              data-animate-delay="8"
             >
               <div
                 class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4 mx-auto"
@@ -1352,7 +1728,7 @@ useSeoMeta({
   title: "Tech FA | AI-Powered Business Workflow Automation",
   ogTitle: "Tech FA | AI-Powered Business Workflow Automation",
   description:
-    "We automate your business processes and workflows using the newest AI technologies. Free implementation — you only pay per usage. AI email assistant, inbound call AI, and more.",
+    "We automate your business processes and workflows using the newest AI technologies. Free implementation — you only pay per usage. AI email, call, Telegram, Google review, Instagram, Facebook Marketplace, and social media assistants.",
   ogDescription:
     "We automate your business processes and workflows using the newest AI technologies. Free implementation — you only pay per usage.",
   ogImage: "/tech-fa-full.png",
@@ -1362,7 +1738,7 @@ useSeoMeta({
   twitterCard: "summary_large_image",
   twitterTitle: "Tech FA | AI-Powered Business Workflow Automation",
   twitterDescription:
-    "We automate your business workflows using AI. Free implementation, pay only per usage.",
+    "We automate your business workflows with AI assistants for email, calls, messaging, reviews, and social media.",
   robots: "index, follow",
 });
 
@@ -1586,6 +1962,15 @@ onMounted(() => {
 }
 [data-animate-delay="5"] {
   transition-delay: 0.5s;
+}
+[data-animate-delay="6"] {
+  transition-delay: 0.6s;
+}
+[data-animate-delay="7"] {
+  transition-delay: 0.7s;
+}
+[data-animate-delay="8"] {
+  transition-delay: 0.8s;
 }
 
 .line-clamp-2 {
