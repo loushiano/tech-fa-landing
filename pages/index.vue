@@ -1792,6 +1792,26 @@ const submitStatus = ref({
 
 const blogPosts = ref([
   {
+    slug: "benefits-of-ai-automation-for-restaurants",
+    title: "How AI Automation Helps Restaurants Serve Guests Faster",
+    excerpt:
+      "See how AI call, email, review, and social messaging assistants help restaurants capture reservations, answer guests, and protect their reputation.",
+    date: "Apr 29, 2026",
+    category: "Industry Solutions",
+    icon: "🍽️",
+    gradient: "bg-gradient-to-br from-rose-500 to-orange-600",
+  },
+  {
+    slug: "benefits-of-ai-automation-for-mechanics",
+    title: "How AI Automation Helps Mechanics Book More Repair Jobs",
+    excerpt:
+      "Learn how auto shops can use AI assistants to answer missed calls, qualify repair requests, respond to reviews, and turn messages into appointments.",
+    date: "Apr 29, 2026",
+    category: "Industry Solutions",
+    icon: "🔧",
+    gradient: "bg-gradient-to-br from-slate-600 to-blue-700",
+  },
+  {
     slug: "smart-software-solutions-backbone-modern-business",
     title:
       "Why Smart Software Solutions Are the Backbone of Modern Business",
@@ -1975,6 +1995,7 @@ onMounted(() => {
 
 .line-clamp-2 {
   display: -webkit-box;
+  line-clamp: 2;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;

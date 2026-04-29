@@ -230,12 +230,25 @@
             <!-- Hero Image -->
             <div
               class="h-72 sm:h-96 rounded-2xl relative overflow-hidden mb-12 border border-base-300"
+              :class="!blog.image ? blog.gradient : ''"
             >
               <img
+                v-if="blog.image"
                 :src="blog.image"
                 :alt="blog.title"
                 class="w-full h-full object-cover"
               />
+              <div
+                v-else
+                class="absolute inset-0 flex items-center justify-center"
+              >
+                <div class="text-center text-white">
+                  <div class="text-6xl mb-4">{{ blog.icon }}</div>
+                  <div class="text-lg font-medium opacity-90">
+                    {{ blog.category }}
+                  </div>
+                </div>
+              </div>
             </div>
           </header>
 
@@ -444,12 +457,44 @@
 <script setup>
 import { ref, computed } from "vue";
 import Blog1 from "~/components/blog1.vue";
+import BlogMechanics from "~/components/blogMechanics.vue";
+import BlogRestaurants from "~/components/blogRestaurants.vue";
 
 const mobileMenuOpen = ref(false);
 const route = useRoute();
 const slug = route.params.slug;
 
 const blogs = {
+  "benefits-of-ai-automation-for-restaurants": {
+    id: 2,
+    slug: "benefits-of-ai-automation-for-restaurants",
+    title: "How AI Automation Helps Restaurants Serve Guests Faster",
+    excerpt:
+      "See how AI call, email, review, and social messaging assistants help restaurants capture reservations, answer guests, and protect their reputation.",
+    date: "April 29, 2026",
+    publishedDate: "2026-04-29",
+    category: "Industry Solutions",
+    readTime: "4 min read",
+    image: null,
+    icon: "🍽️",
+    gradient: "bg-gradient-to-br from-rose-500 to-orange-600",
+    content: BlogRestaurants,
+  },
+  "benefits-of-ai-automation-for-mechanics": {
+    id: 3,
+    slug: "benefits-of-ai-automation-for-mechanics",
+    title: "How AI Automation Helps Mechanics Book More Repair Jobs",
+    excerpt:
+      "Learn how auto shops can use AI assistants to answer missed calls, qualify repair requests, respond to reviews, and turn messages into appointments.",
+    date: "April 29, 2026",
+    publishedDate: "2026-04-29",
+    category: "Industry Solutions",
+    readTime: "4 min read",
+    image: null,
+    icon: "🔧",
+    gradient: "bg-gradient-to-br from-slate-600 to-blue-700",
+    content: BlogMechanics,
+  },
   "smart-software-solutions-backbone-modern-business": {
     id: 1,
     slug: "smart-software-solutions-backbone-modern-business",
@@ -458,9 +503,12 @@ const blogs = {
     excerpt:
       "Real problems companies face every day — slow workflows, costly errors, and disconnected systems.",
     date: "January 11, 2025",
+    publishedDate: "2025-01-11",
     category: "AI & Automation",
     readTime: "3 min read",
     image: "/blog-1.png",
+    icon: "🧠",
+    gradient: "bg-gradient-to-br from-blue-500 to-purple-600",
     content: Blog1,
   },
 };
@@ -478,7 +526,7 @@ useSeoMeta({
     ? blog.value.excerpt
     : "The blog post you are looking for was not found.",
   ogDescription: blog.value ? blog.value.excerpt : "Blog post not found",
-  ogImage: blog.value ? blog.value.image : "/tech-fa-full.png",
+  ogImage: blog.value?.image || "/tech-fa-full.png",
   ogUrl: `https://tech-fa.ca/blog/${slug}`,
   ogType: "article",
   ogSiteName: "Tech FA",
@@ -510,7 +558,7 @@ if (blog.value) {
           "@type": "Article",
           headline: blog.value.title,
           description: blog.value.excerpt,
-          datePublished: "2025-01-11",
+          datePublished: blog.value.publishedDate,
           author: {
             "@type": "Organization",
             name: "Tech FA",

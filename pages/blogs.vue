@@ -446,6 +446,30 @@ const mobileMenuOpen = ref(false);
 
 const blogs = ref([
   {
+    slug: "benefits-of-ai-automation-for-restaurants",
+    title: "How AI Automation Helps Restaurants Serve Guests Faster",
+    excerpt:
+      "See how AI call, email, review, and social messaging assistants help restaurants capture reservations, answer guests, and protect their reputation.",
+    date: "April 29, 2026",
+    category: "Industry Solutions",
+    icon: "🍽️",
+    gradient: "bg-gradient-to-br from-rose-500 to-orange-600",
+    image: null,
+    available: true,
+  },
+  {
+    slug: "benefits-of-ai-automation-for-mechanics",
+    title: "How AI Automation Helps Mechanics Book More Repair Jobs",
+    excerpt:
+      "Learn how auto shops can use AI assistants to answer missed calls, qualify repair requests, respond to reviews, and turn messages into appointments.",
+    date: "April 29, 2026",
+    category: "Industry Solutions",
+    icon: "🔧",
+    gradient: "bg-gradient-to-br from-slate-600 to-blue-700",
+    image: null,
+    available: true,
+  },
+  {
     slug: "smart-software-solutions-backbone-modern-business",
     title:
       "Why Smart Software Solutions Are the Backbone of Modern Business",
@@ -536,6 +560,7 @@ const handleSubscription = async () => {
 <style scoped>
 .line-clamp-2 {
   display: -webkit-box;
+  line-clamp: 2;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -543,6 +568,7 @@ const handleSubscription = async () => {
 
 .line-clamp-3 {
   display: -webkit-box;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
