@@ -89,14 +89,15 @@
           Ready to Automate Restaurant Follow-Up?
         </h3>
         <p class="text-lg text-muted-foreground mb-6">
-          We implement the automation for free, connect it to the workflows that
-          matter most, and you only pay for what you use.
+          Pricing is custom, based on your budget. You will not be left
+          hanging, and you will be taught how to monitor and maintain the
+          system if you do not want ongoing help.
         </p>
         <NuxtLink
           to="/#contact"
           class="bg-primary text-primary-content px-8 py-4 rounded-xl hover:bg-primary-focus transition-colors inline-flex items-center space-x-2 font-semibold"
         >
-          <span class="text-white">Get Started Free</span>
+          <span class="text-white">Work with me</span>
           <svg
             class="w-4 h-4"
             fill="none"

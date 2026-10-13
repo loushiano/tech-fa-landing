@@ -13,59 +13,59 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: "en" },
-      title: "Tech FA | AI-Powered Business Workflow Automation",
+      title: "Ali Fawaz | Software Engineering Arm for Businesses",
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         {
           name: "description",
           content:
-            "Tech FA automates your business processes and workflows using the newest AI technologies. Free implementation — you only pay per usage. AI email assistant, inbound call AI, and more.",
+            "Ali Fawaz is one person, not a company, who can do the work a whole team used to do. 10 years building software, 3 years with the newest AI technologies.",
         },
         {
           name: "keywords",
           content:
-            "AI automation, business workflow automation, AI email assistant, AI call assistant, business process automation, AI integration, workflow optimization, Tech FA",
+            "Ali Fawaz, software engineering arm, newest AI technologies, AI systems integration, business automation, software engineer",
         },
-        { name: "author", content: "Tech FA" },
+        { name: "author", content: "Ali Fawaz" },
         { name: "robots", content: "index, follow" },
 
         // Open Graph
         {
           property: "og:title",
-          content: "Tech FA | AI-Powered Business Workflow Automation",
+          content: "Ali Fawaz | Software Engineering Arm for Businesses",
         },
         {
           property: "og:description",
           content:
-            "We automate your business workflows using the newest AI technologies. Free implementation — you only pay per usage.",
+            "Ali Fawaz is one person, not a company, who can do the work a whole team used to do. 10 years building software, 3 years with the newest AI technologies.",
         },
-        { property: "og:image", content: "https://tech-fa.ca/tech-fa-full.png" },
-        { property: "og:url", content: "https://tech-fa.ca" },
-        { property: "og:type", content: "website" },
-        { property: "og:site_name", content: "Tech FA" },
+        { property: "og:image", content: "https://tech-fa.ca/ali-fawaz.jpg" },
+        { property: "og:url", content: "https://tech-fa.ca/" },
+        { property: "og:type", content: "profile" },
+        { property: "og:site_name", content: "Ali Fawaz" },
         { property: "og:locale", content: "en_US" },
 
         // Twitter Card
         { name: "twitter:card", content: "summary_large_image" },
         {
           name: "twitter:title",
-          content: "Tech FA | AI-Powered Business Workflow Automation",
+          content: "Ali Fawaz | Software Engineering Arm for Businesses",
         },
         {
           name: "twitter:description",
           content:
-            "We automate your business workflows using AI. Free implementation, pay only per usage.",
+            "A software engineer with 10 years building software and 3 years integrating AI systems. One person, not a company.",
         },
-        { name: "twitter:image", content: "https://tech-fa.ca/tech-fa-full.png" },
+        { name: "twitter:image", content: "https://tech-fa.ca/ali-fawaz.jpg" },
 
         // Additional SEO
-        { name: "theme-color", content: "#1E40AF" },
+        { name: "theme-color", content: "#0071E3" },
         { name: "msapplication-TileColor", content: "#1E40AF" },
       ],
       link: [
         { rel: "icon", type: "image/png", href: "/tech-fa-icon.png" },
-        { rel: "canonical", href: "https://tech-fa.ca" },
+        { rel: "canonical", href: "https://tech-fa.ca/" },
       ],
     },
   },

@@ -2,14 +2,19 @@
   <main>
     <!-- Header -->
     <header
-      class="fixed top-0 left-0 w-full z-50 border-b border-base-300 backdrop-blur bg-background/80 shadow-sm"
+      class="fixed top-0 left-0 w-full z-50 border-b border-base-300/80 backdrop-blur-xl bg-background/70"
     >
-      <div class="container flex h-16 items-center justify-between px-4">
+      <div class="container flex h-12 items-center justify-between px-4">
         <div class="flex items-center gap-6">
           <a aria-label="Homepage" class="flex items-center gap-2" href="/">
-            <img src="/tech-fa-full.png" class="h-14" alt="Tech FA" />
+            <img src="/tech-fa-full.png" class="h-8 w-auto" alt="Tech FA logo" width="723" height="250" />
           </a>
           <nav class="hidden md:flex items-center gap-6">
+            <a
+              class="text-sm font-medium text-foreground hover:text-primary transition"
+              href="#about"
+              >About</a
+            >
             <a
               class="text-sm font-medium text-foreground hover:text-primary transition"
               href="#solutions"
@@ -23,7 +28,7 @@
             <a
               class="text-sm font-medium text-foreground hover:text-primary transition"
               href="#why-us"
-              >Why Us</a
+              >Why me</a
             >
             <NuxtLink
               class="text-sm font-medium text-foreground hover:text-primary transition"
@@ -39,9 +44,9 @@
         </div>
         <div class="hidden md:flex items-center gap-4">
           <a
-            class="inline-flex items-center justify-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-content shadow-sm hover:bg-primary-focus h-10 px-6 rounded-full text-sm font-semibold"
+            class="inline-flex items-center justify-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-content hover:bg-primary-focus h-10 px-6 rounded-full text-sm font-semibold"
             href="#contact"
-            >Get Started Free</a
+            >Work with me</a
           >
         </div>
         <button
@@ -89,6 +94,12 @@
         <nav class="flex flex-col p-4 gap-4">
           <a
             class="text-sm font-medium text-foreground hover:text-primary transition py-2"
+            href="#about"
+            @click="mobileMenuOpen = false"
+            >About</a
+          >
+          <a
+            class="text-sm font-medium text-foreground hover:text-primary transition py-2"
             href="#solutions"
             @click="mobileMenuOpen = false"
             >Solutions</a
@@ -103,7 +114,7 @@
             class="text-sm font-medium text-foreground hover:text-primary transition py-2"
             href="#why-us"
             @click="mobileMenuOpen = false"
-            >Why Us</a
+            >Why me</a
           >
           <NuxtLink
             class="text-sm font-medium text-foreground hover:text-primary transition py-2"
@@ -118,10 +129,10 @@
             >Contact</a
           >
           <a
-            class="inline-flex items-center justify-center bg-primary text-primary-content shadow-sm hover:bg-primary-focus h-10 px-6 rounded-full text-sm font-semibold mt-2"
+            class="inline-flex items-center justify-center bg-primary text-primary-content hover:bg-primary-focus h-10 px-6 rounded-full text-sm font-semibold mt-2"
             href="#contact"
             @click="mobileMenuOpen = false"
-            >Get Started Free</a
+            >Work with me</a
           >
         </nav>
       </div>
@@ -140,80 +151,166 @@
           class="flex flex-col items-center pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-16 sm:pb-20 md:pb-24 relative z-10"
         >
           <div
-            class="flex w-full max-w-5xl flex-col space-y-6 overflow-hidden pt-8 px-4"
+            class="grid w-full max-w-6xl items-center gap-10 px-4 pt-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14"
           >
-            <div class="hero-title flex justify-center">
-              <span
-                class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-2"
-                >AI-Powered Business Automation</span
-              >
-            </div>
-            <h1
-              class="hero-title text-center text-foreground font-semibold tracking-[-0.02em] text-[2.25rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] leading-tight"
-            >
-              <span class="inline">We Automate Your Business </span>
-              <span class="inline text-primary">Workflows </span>
-              <span class="inline">Using </span>
-              <span class="inline text-secondary">AI.</span>
-            </h1>
-            <p
-              class="hero-subtitle text-center text-lg sm:text-xl text-muted-foreground mt-6 max-w-3xl mx-auto"
-            >
-              We specialize in automating business processes and workflows using
-              the newest AI technologies. We implement it for free, you
-              only pay for what you use.
-            </p>
-          </div>
-          <div
-            class="hero-buttons mx-auto mt-8 flex w-full max-w-2xl flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
-          >
-            <div class="flex flex-col items-center gap-4">
-              <div
-                class="flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto"
-              >
-                <a
-                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-semibold shadow h-12 rounded-full px-8 bg-primary hover:bg-primary-focus text-primary-content transition-all duration-300"
-                  href="#contact"
-                  >Get Started Free</a
-                >
-                <a
-                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-semibold h-12 rounded-full px-8 border-2 border-primary text-primary hover:bg-primary/5 transition-all duration-300"
-                  href="#how-it-works"
-                  >See How It Works</a
+            <div class="flex flex-col space-y-6">
+              <div class="hero-title">
+                <span
+                  class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold"
+                  >Ali Fawaz · Software engineer</span
                 >
               </div>
-              <p class="text-sm text-muted-foreground">
-                Zero upfront cost &middot; Pay only per usage
+              <h1
+                class="hero-title text-foreground font-semibold tracking-[-0.02em] text-[2.25rem] sm:text-[3rem] md:text-[3.25rem] lg:text-[3.75rem] leading-tight"
+              >
+                Your software engineering arm, using the
+                <span class="text-primary">newest AI technologies</span>
+              </h1>
+              <p
+                class="hero-subtitle text-lg sm:text-xl text-muted-foreground max-w-2xl"
+              >
+                Ali Fawaz is a software engineer who can be your software
+                engineering arm. I have 10 years of building software and 3
+                years of integrating AI systems. I am not a company. I am one
+                person who can do the work a whole team used to do. I am
+                passionate about bringing software and systems into real
+                businesses, and I use the newest AI technologies to raise
+                performance and automation.
+              </p>
+              <div class="hero-buttons flex flex-col gap-4">
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap text-sm font-semibold h-12 rounded-full px-8 bg-primary hover:bg-primary-focus text-primary-content transition-all duration-300"
+                    href="#contact"
+                    >Work with me</a
+                  >
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap text-sm font-semibold h-12 rounded-full px-8 border border-primary text-primary hover:bg-primary/5 transition-all duration-300"
+                    href="#about"
+                    >Read about Ali</a
+                  >
+                </div>
+                <dl class="grid grid-cols-3 gap-3 max-w-lg pt-2">
+                  <div class="rounded-2xl border border-base-300 bg-base-100 px-3 py-3">
+                    <dt class="text-2xl font-semibold text-foreground">10</dt>
+                    <dd class="text-xs sm:text-sm text-muted-foreground leading-snug">
+                      years building software
+                    </dd>
+                  </div>
+                  <div class="rounded-2xl border border-base-300 bg-base-100 px-3 py-3">
+                    <dt class="text-2xl font-semibold text-foreground">3</dt>
+                    <dd class="text-xs sm:text-sm text-muted-foreground leading-snug">
+                      years integrating AI
+                    </dd>
+                  </div>
+                  <div class="rounded-2xl border border-base-300 bg-base-100 px-3 py-3">
+                    <dt class="text-2xl font-semibold text-foreground">1</dt>
+                    <dd class="text-xs sm:text-sm text-muted-foreground leading-snug">
+                      person, a whole team's work
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <figure class="hero-subtitle mx-auto w-full max-w-md lg:max-w-none">
+              <img
+                src="/ali-fawaz.jpg"
+                alt="Portrait of Ali Fawaz, software engineer"
+                width="800"
+                height="800"
+                fetchpriority="high"
+                decoding="async"
+                class="aspect-square w-full rounded-3xl object-cover object-center border border-base-300"
+              />
+              <figcaption class="mt-3 text-sm text-muted-foreground text-center lg:text-left">
+                Ali Fawaz, software engineer. One person who can do the work a whole team used to do.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="py-20 bg-background border-t border-base-300">
+        <div class="container mx-auto px-4">
+          <div class="max-w-3xl mx-auto">
+            <div data-animate="fade-up">
+              <span
+                class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+                >About Ali Fawaz</span
+              >
+              <h2
+                class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6"
+              >
+                Who is Ali Fawaz?
+              </h2>
+              <p class="text-lg text-foreground leading-relaxed mb-6">
+                Ali Fawaz is a software engineer who works as a software
+                engineering arm for companies that need systems built and put
+                into daily use. He has 10 years of building software and 3
+                years of integrating AI systems. He is one person, not a company,
+                and he can do the work a whole team used to do. He designs,
+                builds, and deploys the systems himself.
+              </p>
+              <p class="text-lg text-muted-foreground leading-relaxed mb-6">
+                I am passionate about bringing software and systems into real
+                businesses. I apply the newest AI technologies where they
+                change how a company performs: work that used to wait on a
+                person gets handled, tools that do not talk to each other get
+                connected, and repeated steps get automated. The result I am
+                after is a higher level of performance, with software that
+                matches how the business actually runs.
+              </p>
+              <p class="text-lg text-muted-foreground leading-relaxed">
+                Pricing is custom, based on your budget. I will not leave you
+                hanging. If you do not want to keep paying me, I will teach you
+                how to monitor and maintain what was built.
+              </p>
+            </div>
+
+            <div class="mt-12" data-animate="fade-up" data-animate-delay="1">
+              <h3 class="text-2xl font-semibold text-foreground mb-3">
+                What does a software engineering arm do?
+              </h3>
+              <p class="text-lg text-muted-foreground leading-relaxed">
+                A software engineering arm is a person who designs, builds, and
+                runs the software and AI systems a company needs without hiring
+                a full internal team. I am one person who can do the work a
+                whole team used to do. I study how the business
+                works, then apply the newest AI technologies to raise
+                performance: fewer manual hours, fewer missed leads, and
+                automation that stays tied to the real workflow.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Solutions / What We've Automated -->
+      <!-- Solutions / What I've built -->
       <section id="solutions" class="py-20 bg-base-100">
         <div class="container mx-auto px-4">
           <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12" data-animate="fade-up">
               <span
                 class="inline-block px-4 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium mb-4"
-                >Our Solutions</span
+                >What I build</span
               >
               <h2
                 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
               >
-                AI Assistants We've Built
+                Newest AI technologies in real businesses
               </h2>
               <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Real AI solutions already automating work for businesses like
-                yours, with many more on the way.
+                These are systems I have already built. Each one uses the
+                newest AI technologies to take repetitive work off a team and raise how the business
+                performs.
               </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <!-- Solution 1: Email Assistant -->
               <div
-                class="rounded-2xl border-2 border-primary/20 bg-primary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                class="rounded-2xl border border-primary/20 bg-primary/5 p-8 transition-all duration-300 relative overflow-hidden"
                 data-animate="fade-up"
                 data-animate-delay="1"
               >
@@ -302,7 +399,7 @@
 
               <!-- Solution 2: Inbound Missed Calls AI -->
               <div
-                class="rounded-2xl border-2 border-secondary/20 bg-secondary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                class="rounded-2xl border-2 border-secondary/20 bg-secondary/5 p-8 transition-all duration-300 relative overflow-hidden"
                 data-animate="fade-up"
                 data-animate-delay="2"
               >
@@ -333,7 +430,7 @@
                   AI Inbound Call Assistant
                 </h3>
                 <p class="text-muted-foreground mb-4">
-                  Never miss a business opportunity again. Our AI answers your
+                  Never miss a business opportunity again. It answers
                   inbound calls when you can't, handles inquiries, and captures
                   every lead.
                 </p>
@@ -391,7 +488,7 @@
 
               <!-- Solution 3: Telegram AI Assistant -->
               <div
-                class="rounded-2xl border-2 border-primary/20 bg-primary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                class="rounded-2xl border border-primary/20 bg-primary/5 p-8 transition-all duration-300 relative overflow-hidden"
                 data-animate="fade-up"
                 data-animate-delay="3"
               >
@@ -467,7 +564,7 @@
 
               <!-- Solution 4: Google Review AI Assistant -->
               <div
-                class="rounded-2xl border-2 border-secondary/20 bg-secondary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                class="rounded-2xl border-2 border-secondary/20 bg-secondary/5 p-8 transition-all duration-300 relative overflow-hidden"
                 data-animate="fade-up"
                 data-animate-delay="4"
               >
@@ -542,7 +639,7 @@
 
               <!-- Solution 5: Instagram Messaging AI Assistant -->
               <div
-                class="rounded-2xl border-2 border-primary/20 bg-primary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                class="rounded-2xl border border-primary/20 bg-primary/5 p-8 transition-all duration-300 relative overflow-hidden"
                 data-animate="fade-up"
                 data-animate-delay="5"
               >
@@ -617,7 +714,7 @@
 
               <!-- Solution 6: Facebook Marketplace AI Assistant -->
               <div
-                class="rounded-2xl border-2 border-secondary/20 bg-secondary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                class="rounded-2xl border-2 border-secondary/20 bg-secondary/5 p-8 transition-all duration-300 relative overflow-hidden"
                 data-animate="fade-up"
                 data-animate-delay="6"
               >
@@ -692,7 +789,7 @@
 
               <!-- Solution 7: Social Media Content Automation -->
               <div
-                class="rounded-2xl border-2 border-primary/20 bg-primary/5 p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                class="rounded-2xl border border-primary/20 bg-primary/5 p-8 transition-all duration-300 relative overflow-hidden"
                 data-animate="fade-up"
                 data-animate-delay="7"
               >
@@ -791,15 +888,15 @@
                 </svg>
               </div>
               <h3 class="text-xl font-semibold text-foreground mb-2">
-                Many More Coming Soon
+                More systems, built for the work in front of you
               </h3>
               <p class="text-muted-foreground max-w-lg mx-auto">
-                We're building new AI-powered automations every month,
-                from invoice processing to appointment scheduling.
+                I also build automations around the work a company already
+                does, from invoice processing to appointment scheduling.
                 <a
                   href="#contact"
                   class="text-primary font-semibold hover:underline"
-                  >Tell us what you need.</a
+                  >Tell me what you need.</a
                 >
               </p>
             </div>
@@ -808,206 +905,90 @@
       </section>
 
       <!-- How It Works -->
-      <section id="how-it-works" class="py-20 bg-background">
+      <section id="how-it-works" class="py-24 bg-background">
         <div class="container mx-auto px-4">
           <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16" data-animate="fade-up">
-              <span
-                class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
-                >Simple Process</span
-              >
+            <div class="text-center mb-16">
               <h2
-                class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
+                class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-[-0.022em] text-foreground mb-4"
               >
-                How It Works
+                How it works
               </h2>
-              <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Getting started is simple. Zero risk, zero upfront investment.
+              <p class="text-[19px] leading-snug text-muted-foreground max-w-2xl mx-auto">
+                You tell me the work and your budget. I build to that, and I do not leave you hanging.
               </p>
             </div>
 
-            <div class="max-w-3xl mx-auto space-y-0">
-              <!-- Step 1: Reach Out -->
-              <div
-                class="relative flex gap-6 md:gap-8 pb-12"
-                data-animate="fade-up"
-                data-animate-delay="1"
-              >
-                <div class="flex flex-col items-center">
+            <div class="overflow-x-auto pb-2">
+              <div class="relative min-w-[760px]">
+                <div
+                  class="pointer-events-none absolute left-[12.5%] right-[12.5%] top-4 h-px bg-base-300"
+                  aria-hidden="true"
+                ></div>
+              <ol class="relative grid grid-cols-4 gap-8">
+                <li class="relative text-center">
                   <div
-                    class="w-14 h-14 rounded-full bg-primary text-primary-content text-xl font-bold flex items-center justify-center flex-shrink-0 z-10"
+                    class="relative z-10 mx-auto mb-5 flex h-8 w-8 items-center justify-center rounded-full border border-base-300 bg-background text-sm text-foreground"
                   >
                     1
                   </div>
-                  <div class="w-0.5 flex-1 bg-primary/20 mt-3"></div>
-                </div>
-                <div class="pt-2 pb-4">
-                  <div
-                    class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-7 h-7 text-primary"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
-                      />
-                    </svg>
-                  </div>
-                  <h3 class="text-xl font-semibold text-foreground mb-2">
-                    You Reach Out
+                  <h3 class="text-[17px] font-semibold tracking-[-0.016em] text-foreground mb-2">
+                    Your budget
                   </h3>
-                  <p class="text-muted-foreground leading-relaxed">
-                    Send us a message or book a call. Tell us about your
-                    business and the manual processes that are slowing you down.
+                  <p class="text-sm leading-relaxed text-muted-foreground">
+                    Send me the work and what you can spend.
                   </p>
-                </div>
-              </div>
-
-              <!-- Step 2: We Analyze -->
-              <div
-                class="relative flex gap-6 md:gap-8 pb-12"
-                data-animate="fade-up"
-                data-animate-delay="2"
-              >
-                <div class="flex flex-col items-center">
+                </li>
+                <li class="relative text-center">
                   <div
-                    class="w-14 h-14 rounded-full bg-primary text-primary-content text-xl font-bold flex items-center justify-center flex-shrink-0 z-10"
+                    class="relative z-10 mx-auto mb-5 flex h-8 w-8 items-center justify-center rounded-full border border-base-300 bg-background text-sm text-foreground"
                   >
                     2
                   </div>
-                  <div class="w-0.5 flex-1 bg-primary/20 mt-3"></div>
-                </div>
-                <div class="pt-2 pb-4">
-                  <div
-                    class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-7 h-7 text-primary"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                      />
-                    </svg>
-                  </div>
-                  <h3 class="text-xl font-semibold text-foreground mb-2">
-                    We Analyze Your Needs
+                  <h3 class="text-[17px] font-semibold tracking-[-0.016em] text-foreground mb-2">
+                    A custom fit
                   </h3>
-                  <p class="text-muted-foreground leading-relaxed">
-                    We study your workflows, identify bottlenecks, and figure
-                    out exactly where AI and automation can save you the most
-                    time and money.
+                  <p class="text-sm leading-relaxed text-muted-foreground">
+                    I shape the system so the price matches that budget.
                   </p>
-                </div>
-              </div>
-
-              <!-- Step 3: We Implement Free -->
-              <div
-                class="relative flex gap-6 md:gap-8 pb-12"
-                data-animate="fade-up"
-                data-animate-delay="3"
-              >
-                <div class="flex flex-col items-center">
+                </li>
+                <li class="relative text-center">
                   <div
-                    class="w-14 h-14 rounded-full bg-primary text-primary-content text-xl font-bold flex items-center justify-center flex-shrink-0 z-10"
+                    class="relative z-10 mx-auto mb-5 flex h-8 w-8 items-center justify-center rounded-full border border-base-300 bg-background text-sm text-foreground"
                   >
                     3
                   </div>
-                  <div class="w-0.5 flex-1 bg-primary/20 mt-3"></div>
-                </div>
-                <div class="pt-2 pb-4">
-                  <div
-                    class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-7 h-7 text-primary"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
-                      />
-                    </svg>
-                  </div>
-                  <h3 class="text-xl font-semibold text-foreground mb-2">
-                    We Build &amp; Deploy for Free
+                  <h3 class="text-[17px] font-semibold tracking-[-0.016em] text-foreground mb-2">
+                    I stay with it
                   </h3>
-                  <p class="text-muted-foreground leading-relaxed">
-                    We design, build, and deploy your custom AI automation at no
-                    cost. You don't pay a cent until the solution is live and
-                    working.
+                  <p class="text-sm leading-relaxed text-muted-foreground">
+                    I build and deploy it myself, and I will not leave you hanging.
                   </p>
-                </div>
-              </div>
-
-              <!-- Step 4: Pay Per Usage -->
-              <div
-                class="relative flex gap-6 md:gap-8"
-                data-animate="fade-up"
-                data-animate-delay="4"
-              >
-                <div class="flex flex-col items-center">
+                </li>
+                <li class="relative text-center">
                   <div
-                    class="w-14 h-14 rounded-full bg-secondary text-secondary-content text-xl font-bold flex items-center justify-center flex-shrink-0 z-10"
+                    class="relative z-10 mx-auto mb-5 flex h-8 w-8 items-center justify-center rounded-full border border-base-300 bg-background text-sm text-foreground"
                   >
                     4
                   </div>
-                </div>
-                <div class="pt-2">
-                  <div
-                    class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-4"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-7 h-7 text-secondary"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"
-                      />
-                    </svg>
-                  </div>
-                  <h3 class="text-xl font-semibold text-foreground mb-2">
-                    You Pay Only Per Usage
+                  <h3 class="text-[17px] font-semibold tracking-[-0.016em] text-foreground mb-2">
+                    You can take it
                   </h3>
-                  <p class="text-muted-foreground leading-relaxed">
-                    No subscriptions, no surprises. You only pay based on how
-                    much the automation runs. The more value it delivers, the
-                    more you save.
+                  <p class="text-sm leading-relaxed text-muted-foreground">
+                    If you stop paying me, I teach you how to monitor and maintain it.
                   </p>
-                </div>
+                </li>
+              </ol>
               </div>
             </div>
+
 
             <div class="text-center mt-16" data-animate="fade-up">
               <a
                 href="#contact"
                 class="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-content font-semibold hover:bg-primary-focus transition-colors"
               >
-                Start Your Free Automation
+                Tell me what to build
               </a>
             </div>
           </div>
@@ -1021,25 +1002,25 @@
             <div class="text-center" data-animate="fade-up">
               <span
                 class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
-                >Why Tech FA</span
+                >Why work with me</span
               >
               <h2
                 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
               >
-                Why Businesses Choose Us
+                Why companies bring me in
               </h2>
               <p
                 class="text-lg text-muted-foreground max-w-2xl mx-auto mb-12"
               >
-                We take the risk so you don't have to. Free implementation,
-                pay-per-use pricing, and cutting-edge AI.
+                You get one engineer who has spent a decade building software
+                and three years putting AI systems into real operations.
               </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
               <!-- Card 1: Zero Upfront Cost -->
               <div
-                class="bg-background rounded-2xl p-8 border border-base-300 hover:shadow-lg transition-all duration-300"
+                class="bg-background rounded-2xl p-8 border border-base-300 transition-all duration-300"
                 data-animate="fade-up"
                 data-animate-delay="1"
               >
@@ -1062,18 +1043,18 @@
                   </svg>
                 </div>
                 <h3 class="text-2xl font-semibold text-foreground mb-3">
-                  Zero Upfront Cost
+                  10 years building software
                 </h3>
                 <p class="text-muted-foreground leading-relaxed">
-                  We build and deploy your AI automation completely free. No
-                  setup fees, no development charges. You only pay when the
-                  automation is live and delivering results.
+                  I have spent 10 years building software that has to work in
+                  the business, not only in a demo. That means systems, data,
+                  and the messy handoffs between tools people already use.
                 </p>
               </div>
 
               <!-- Card 2: Pay Per Usage -->
               <div
-                class="bg-background rounded-2xl p-8 border border-base-300 hover:shadow-lg transition-all duration-300"
+                class="bg-background rounded-2xl p-8 border border-base-300 transition-all duration-300"
                 data-animate="fade-up"
                 data-animate-delay="2"
               >
@@ -1096,18 +1077,18 @@
                   </svg>
                 </div>
                 <h3 class="text-2xl font-semibold text-foreground mb-3">
-                  Pay Only for What You Use
+                  3 years integrating AI systems
                 </h3>
                 <p class="text-muted-foreground leading-relaxed">
-                  No monthly subscriptions or hidden fees. Our usage-based
-                  pricing means you pay proportionally to the value delivered.
-                  If it doesn't run, you don't pay.
+                  For the last 3 years I have integrated AI systems into live
+                  work: systems that answer, draft, qualify, and route, tied to
+                  the documents and tools the business already has.
                 </p>
               </div>
 
               <!-- Card 3: Cutting-Edge AI -->
               <div
-                class="bg-background rounded-2xl p-8 border border-base-300 hover:shadow-lg transition-all duration-300"
+                class="bg-background rounded-2xl p-8 border border-base-300 transition-all duration-300"
                 data-animate="fade-up"
                 data-animate-delay="3"
               >
@@ -1130,18 +1111,18 @@
                   </svg>
                 </div>
                 <h3 class="text-2xl font-semibold text-foreground mb-3">
-                  Newest AI Technologies
+                  One person, a whole team's work
                 </h3>
                 <p class="text-muted-foreground leading-relaxed">
-                  We use the latest in AI and machine learning to build
-                  solutions that are smarter, faster, and more reliable. Your
-                  business stays ahead of the curve.
+                  I am one person, not a company. I can do the work a whole
+                  team used to do. You talk to the person who designs the
+                  system, writes it, and stays with it after it goes live.
                 </p>
               </div>
 
               <!-- Card 4: Tailored to You -->
               <div
-                class="bg-background rounded-2xl p-8 border border-base-300 hover:shadow-lg transition-all duration-300"
+                class="bg-background rounded-2xl p-8 border border-base-300 transition-all duration-300"
                 data-animate="fade-up"
                 data-animate-delay="4"
               >
@@ -1164,12 +1145,12 @@
                   </svg>
                 </div>
                 <h3 class="text-2xl font-semibold text-foreground mb-3">
-                  Tailored to Your Business
+                  Higher performance, then automation
                 </h3>
                 <p class="text-muted-foreground leading-relaxed">
-                  No cookie-cutter templates. Every automation we build is
-                  custom-designed for your specific workflows, tools, and team.
-                  It fits like a glove.
+                  I use the newest AI technologies to lift how the company
+                  performs: less manual work, fewer dropped conversations, and
+                  systems that match the way the business already operates.
                 </p>
               </div>
             </div>
@@ -1189,16 +1170,16 @@
               <h2
                 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
               >
-                What Our Clients Say
+                What changes when the systems are live
               </h2>
               <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Real results from real businesses we've helped automate.
+                Two businesses I have worked with, in their own words.
               </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
               <div
-                class="bg-base-100 rounded-2xl p-8 border border-base-300 shadow-sm"
+                class="bg-base-100 rounded-2xl p-8 border border-base-300"
                 data-animate="fade-up"
                 data-animate-delay="1"
               >
@@ -1218,7 +1199,7 @@
                 <blockquote
                   class="text-foreground text-lg leading-relaxed mb-6"
                 >
-                  "Tech FA connected our scheduling, billing, and payroll
+                  "Ali Fawaz connected our scheduling, billing, and payroll
                   systems in weeks. What used to take our team hours of manual
                   data entry now happens automatically. We've saved over 20
                   hours per week and virtually eliminated billing errors."
@@ -1239,7 +1220,7 @@
               </div>
 
               <div
-                class="bg-base-100 rounded-2xl p-8 border border-base-300 shadow-sm"
+                class="bg-base-100 rounded-2xl p-8 border border-base-300"
                 data-animate="fade-up"
                 data-animate-delay="2"
               >
@@ -1259,7 +1240,7 @@
                 <blockquote
                   class="text-foreground text-lg leading-relaxed mb-6"
                 >
-                  "The AI automation Tech FA built for us transformed how we
+                  "The AI automation Ali Fawaz built for us transformed how we
                   process documents. What used to require three people reviewing
                   reports now happens instantly with higher accuracy. It's been a
                   game-changer for our operations."
@@ -1290,7 +1271,7 @@
             <div class="text-center mb-12" data-animate="fade-up">
               <span
                 class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
-                >Our Blog</span
+                >Notes</span
               >
               <h2
                 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
@@ -1298,8 +1279,8 @@
                 Latest Insights
               </h2>
               <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                AI trends, automation strategies, and practical advice for
-                modern businesses.
+                Notes on the newest AI technologies, automation, and putting software into a
+                working business.
               </p>
             </div>
 
@@ -1308,7 +1289,7 @@
                 v-for="post in blogPosts"
                 :key="post.slug"
                 :to="`/blog/${post.slug}`"
-                class="group bg-background rounded-2xl border border-base-300 overflow-hidden hover:shadow-lg transition-all duration-300"
+                class="group bg-background rounded-2xl border border-base-300 overflow-hidden transition-all duration-300"
                 data-animate="fade-up"
               >
                 <div
@@ -1353,7 +1334,7 @@
             <div class="text-center mt-12" data-animate="fade-up">
               <NuxtLink
                 to="/blogs"
-                class="inline-flex items-center justify-center px-8 py-3 rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary/5 transition-colors"
+                class="inline-flex items-center justify-center px-8 py-3 rounded-full border border-primary text-primary font-semibold hover:bg-primary/5 transition-colors"
               >
                 View All Posts
                 <svg
@@ -1390,14 +1371,14 @@
           <div class="text-center mb-12" data-animate="fade-up">
             <span
               class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
-              >Contact Us</span
+                >Talk to Ali</span
             >
             <h2 class="text-4xl font-bold text-foreground mb-4">
-              Let's Automate Your Workflows
+              Tell me where performance is stuck
             </h2>
             <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ready to eliminate manual work and let AI handle the heavy
-              lifting? Reach out and we'll analyze your needs for free.
+              Describe the work and your budget. I will tell you where software and the newest AI technologies
+              can raise performance.
             </p>
           </div>
           <div
@@ -1418,7 +1399,7 @@
                     <i class="fa-solid fa-envelope text-white text-xl"></i>
                   </div>
                   <div>
-                    <h4 class="font-semibold text-foreground">Email Us</h4>
+                    <h4 class="font-semibold text-foreground">Email me</h4>
                     <p class="text-primary">ali@tech-fa.ca</p>
                   </div>
                 </div>
@@ -1436,7 +1417,7 @@
                       Schedule a Call
                     </h4>
                     <p class="text-muted-foreground">
-                      Book a free consultation
+                      Tell me your budget
                     </p>
                   </div>
                 </div>
@@ -1459,7 +1440,7 @@
                       />
                     </svg>
                     <span class="text-foreground font-medium"
-                      >Free implementation</span
+                      >Custom pricing, based on your budget</span
                     >
                   </div>
                   <div class="flex items-center gap-3 mb-2">
@@ -1477,7 +1458,7 @@
                       />
                     </svg>
                     <span class="text-foreground font-medium"
-                      >Pay only per usage</span
+                      >I will not leave you hanging</span
                     >
                   </div>
                   <div class="flex items-center gap-3">
@@ -1495,30 +1476,24 @@
                       />
                     </svg>
                     <span class="text-foreground font-medium"
-                      >No long-term contracts</span
+                      >I teach you to monitor and maintain it</span
                     >
                   </div>
                 </div>
               </div>
               <div class="mt-8">
                 <p class="mb-4 text-muted-foreground font-medium">
-                  Follow us on social media
+                  Find me on LinkedIn
                 </p>
                 <div class="flex space-x-3">
                   <a
                     href="https://www.linkedin.com/company/tech-fa"
                     class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white hover:bg-primary-focus cursor-pointer transition-all duration-300"
                     target="_blank"
-                    aria-label="LinkedIn"
+                    rel="noopener noreferrer"
+                    aria-label="Ali Fawaz on LinkedIn"
                   >
                     <i class="fa-brands fa-linkedin-in text-lg"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white hover:bg-primary-focus cursor-pointer transition-all duration-300"
-                    aria-label="Twitter"
-                  >
-                    <i class="fa-brands fa-twitter text-lg"></i>
                   </a>
                 </div>
               </div>
@@ -1528,7 +1503,7 @@
                 class="bg-base-100 p-8 rounded-2xl border border-base-300"
               >
                 <h3 class="text-2xl font-semibold mb-6 text-foreground">
-                  Send Us a Message
+                  Send me a message
                 </h3>
                 <form @submit.prevent="handleSubmit" class="space-y-4">
                   <div class="mb-4">
@@ -1586,7 +1561,7 @@
                       rows="4"
                       v-model="form.message"
                       class="w-full p-4 bg-background border border-base-300 rounded-xl text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
-                      placeholder="Tell us about the workflows you'd like to automate"
+                      placeholder="Tell me about the work you want software or the newest AI technologies to take on"
                       required
                     ></textarea>
                   </div>
@@ -1605,7 +1580,7 @@
                   </div>
                   <button
                     type="submit"
-                    class="w-full bg-primary hover:bg-primary-focus text-primary-content py-4 px-6 rounded-xl transition-all duration-300 font-semibold shadow-lg hover:shadow-xl"
+                    class="w-full bg-primary hover:bg-primary-focus text-primary-content py-4 px-6 rounded-xl transition-all duration-300 font-semibold"
                     :disabled="isSubmitting"
                   >
                     {{ isSubmitting ? "Sending..." : "Send Message" }}
@@ -1626,19 +1601,27 @@
           <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div class="md:col-span-2">
               <div class="flex items-center gap-3 mb-4">
-                <img src="/tech-fa-full.png" class="h-14" alt="Tech FA" />
+                <img src="/tech-fa-full.png" class="h-14 w-auto" alt="Tech FA logo" width="723" height="250" />
               </div>
               <p
                 class="text-sm text-muted-foreground leading-relaxed max-w-md"
               >
-                We automate your business workflows using the newest AI
-                technologies. Free implementation, pay only per usage.
+                Ali Fawaz is one person, not a company, who can do the work a
+                whole team used to do. 10 years building software, 3 years
+                integrating the newest AI technologies.
               </p>
             </div>
 
             <div>
               <h4 class="text-foreground font-semibold mb-4">Quick Links</h4>
               <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#about"
+                    class="text-muted-foreground hover:text-primary transition"
+                    >About</a
+                  >
+                </li>
                 <li>
                   <a
                     href="#solutions"
@@ -1657,7 +1640,7 @@
                   <a
                     href="#why-us"
                     class="text-muted-foreground hover:text-primary transition"
-                    >Why Us</a
+                    >Why me</a
                   >
                 </li>
                 <li>
@@ -1693,21 +1676,15 @@
               class="flex flex-col md:flex-row justify-between items-center"
             >
               <p class="text-sm mb-4 md:mb-0 text-muted-foreground">
-                &copy; 2026 Tech FA. All rights reserved.
+                &copy; 2026 Ali Fawaz. All rights reserved.
               </p>
               <div class="flex space-x-4">
                 <a
-                  href="#"
-                  class="w-10 h-10 bg-base-200 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300"
-                  aria-label="Twitter"
-                  ><i
-                    class="fab fa-twitter text-muted-foreground hover:text-primary-content"
-                  ></i
-                ></a>
-                <a
                   href="https://www.linkedin.com/company/tech-fa"
                   class="w-10 h-10 bg-base-200 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300"
-                  aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ali Fawaz on LinkedIn"
                   ><i
                     class="fab fa-linkedin text-muted-foreground hover:text-primary-content"
                   ></i
@@ -1725,52 +1702,72 @@
 import { ref, onMounted } from "vue";
 
 useSeoMeta({
-  title: "Tech FA | AI-Powered Business Workflow Automation",
-  ogTitle: "Tech FA | AI-Powered Business Workflow Automation",
+  title: "Ali Fawaz | Software Engineering Arm for Businesses",
+  ogTitle: "Ali Fawaz | Software Engineering Arm for Businesses",
   description:
-    "We automate your business processes and workflows using the newest AI technologies. Free implementation — you only pay per usage. AI email, call, Telegram, Google review, Instagram, Facebook Marketplace, and social media assistants.",
+    "Ali Fawaz is one person, not a company, who can do the work a whole team used to do. 10 years building software, 3 years with the newest AI technologies.",
   ogDescription:
-    "We automate your business processes and workflows using the newest AI technologies. Free implementation — you only pay per usage.",
-  ogImage: "/tech-fa-full.png",
+    "Ali Fawaz is one person, not a company, who can do the work a whole team used to do. 10 years building software, 3 years with the newest AI technologies.",
+  ogImage: "https://tech-fa.ca/ali-fawaz.jpg",
+  ogImageAlt: "Portrait of Ali Fawaz, software engineer",
   ogUrl: "https://tech-fa.ca",
-  ogType: "website",
-  ogSiteName: "Tech FA",
+  ogType: "profile",
+  ogSiteName: "Ali Fawaz",
   twitterCard: "summary_large_image",
-  twitterTitle: "Tech FA | AI-Powered Business Workflow Automation",
+  twitterTitle: "Ali Fawaz | Software Engineering Arm for Businesses",
   twitterDescription:
-    "We automate your business workflows with AI assistants for email, calls, messaging, reviews, and social media.",
+    "One person, not a company, who can do the work a whole team used to do.",
   robots: "index, follow",
+  author: "Ali Fawaz",
 });
 
 useHead({
   htmlAttrs: { lang: "en" },
-  link: [{ rel: "canonical", href: "https://tech-fa.ca" }],
+  link: [{ rel: "canonical", href: "https://tech-fa.ca/" }],
   script: [
     {
       type: "application/ld+json",
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "Organization",
-        name: "Tech FA",
-        url: "https://tech-fa.ca",
-        logo: "https://tech-fa.ca/tech-fa-full.png",
-        description:
-          "We automate your business processes and workflows using the newest AI technologies. Free implementation — you only pay per usage.",
-        contactPoint: {
-          "@type": "ContactPoint",
-          email: "ali@tech-fa.ca",
-          contactType: "sales",
-        },
-        sameAs: ["https://www.linkedin.com/company/tech-fa"],
-      }),
-    },
-    {
-      type: "application/ld+json",
-      innerHTML: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: "Tech FA",
-        url: "https://tech-fa.ca",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://tech-fa.ca/#ali-fawaz",
+            name: "Ali Fawaz",
+            givenName: "Ali",
+            familyName: "Fawaz",
+            url: "https://tech-fa.ca/",
+            image: "https://tech-fa.ca/ali-fawaz.jpg",
+            jobTitle: "Software Engineer",
+            email: "ali@tech-fa.ca",
+            description:
+              "Ali Fawaz is one person, not a company, who can do the work a whole team used to do. He has 10 years of building software and 3 years of integrating AI systems, and he works as a software engineering arm for businesses.",
+            knowsAbout: [
+              "Software engineering",
+              "AI systems integration",
+              "Newest AI technologies",
+              "Business automation",
+              "Workflow automation",
+            ],
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://tech-fa.ca/#webpage",
+            url: "https://tech-fa.ca/",
+            name: "Ali Fawaz | Software Engineering Arm for Businesses",
+            dateModified: "2026-10-13",
+            inLanguage: "en",
+            mainEntity: { "@id": "https://tech-fa.ca/#ali-fawaz" },
+            about: { "@id": "https://tech-fa.ca/#ali-fawaz" },
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://tech-fa.ca/#website",
+            name: "Ali Fawaz",
+            url: "https://tech-fa.ca/",
+            publisher: { "@id": "https://tech-fa.ca/#ali-fawaz" },
+          },
+        ],
       }),
     },
   ],
@@ -1861,7 +1858,7 @@ const handleSubmit = async () => {
     if (response.status === 200) {
       submitStatus.value = {
         success: true,
-        message: "Thank you for your message! We will get back to you soon.",
+        message: "Thank you. I will get back to you soon.",
       };
       form.value = {
         name: "",
@@ -1896,103 +1893,10 @@ onMounted(() => {
       }
     });
   });
-
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll("[data-animate]").forEach((el) => {
-    observer.observe(el);
-  });
 });
 </script>
 
 <style scoped>
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero-title {
-  animation: fadeInUp 0.8s ease-out 0.2s both;
-}
-
-.hero-subtitle {
-  animation: fadeInUp 0.8s ease-out 0.4s both;
-}
-
-.hero-buttons {
-  animation: fadeInUp 0.8s ease-out 0.6s both;
-}
-
-[data-animate] {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-}
-
-[data-animate="fade-up"] {
-  transform: translateY(30px);
-}
-
-[data-animate="fade-in"] {
-  transform: translateY(0);
-}
-
-[data-animate="slide-left"] {
-  transform: translateX(-30px);
-}
-
-[data-animate="slide-right"] {
-  transform: translateX(30px);
-}
-
-[data-animate].is-visible {
-  opacity: 1;
-  transform: translateY(0) translateX(0);
-}
-
-[data-animate-delay="1"] {
-  transition-delay: 0.1s;
-}
-[data-animate-delay="2"] {
-  transition-delay: 0.2s;
-}
-[data-animate-delay="3"] {
-  transition-delay: 0.3s;
-}
-[data-animate-delay="4"] {
-  transition-delay: 0.4s;
-}
-[data-animate-delay="5"] {
-  transition-delay: 0.5s;
-}
-[data-animate-delay="6"] {
-  transition-delay: 0.6s;
-}
-[data-animate-delay="7"] {
-  transition-delay: 0.7s;
-}
-[data-animate-delay="8"] {
-  transition-delay: 0.8s;
-}
-
 .line-clamp-2 {
   display: -webkit-box;
   line-clamp: 2;

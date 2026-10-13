@@ -135,13 +135,15 @@
         <p class="text-lg text-muted-foreground mb-6">
           Let's build something that actually solves your problems. Reach out
           today, and let's talk about what's slowing you down, and how we can fix
-          it. We implement for free, and you only pay per usage.
+          it. Pricing is custom, based on your budget. You will not be left
+          hanging, and you will be taught how to monitor and maintain the
+          system if you do not want ongoing help.
         </p>
         <NuxtLink
           to="/#contact"
           class="bg-primary text-primary-content px-8 py-4 rounded-xl hover:bg-primary-focus transition-colors inline-flex items-center space-x-2 font-semibold"
         >
-          <span class="text-white">Get Started Free</span>
+          <span class="text-white">Work with me</span>
           <svg
             class="w-4 h-4"
             fill="none"

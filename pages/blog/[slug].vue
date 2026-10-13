@@ -2,7 +2,7 @@
   <div class="bg-background min-h-screen">
     <!-- Header -->
     <header
-      class="fixed top-0 left-0 w-full z-50 border-b border-base-300 backdrop-blur bg-background/80 shadow-sm"
+      class="fixed top-0 left-0 w-full z-50 border-b border-base-300 backdrop-blur bg-background/80"
     >
       <div class="container flex h-16 items-center justify-between px-4">
         <div class="flex items-center gap-6">
@@ -39,9 +39,9 @@
         </div>
         <div class="hidden md:flex items-center gap-4">
           <NuxtLink
-            class="inline-flex items-center justify-center whitespace-nowrap transition-colors bg-primary text-primary-content shadow-sm hover:bg-primary-focus h-10 px-6 rounded-full text-sm font-semibold"
+            class="inline-flex items-center justify-center whitespace-nowrap transition-colors bg-primary text-primary-content hover:bg-primary-focus h-10 px-6 rounded-full text-sm font-semibold"
             to="/#contact"
-            >Get Started Free</NuxtLink
+            >Work with me</NuxtLink
           >
         </div>
         <button
@@ -118,10 +118,10 @@
             >Contact</NuxtLink
           >
           <NuxtLink
-            class="inline-flex items-center justify-center bg-primary text-primary-content shadow-sm hover:bg-primary-focus h-10 px-6 rounded-full text-sm font-semibold mt-2"
+            class="inline-flex items-center justify-center bg-primary text-primary-content hover:bg-primary-focus h-10 px-6 rounded-full text-sm font-semibold mt-2"
             to="/#contact"
             @click="mobileMenuOpen = false"
-            >Get Started Free</NuxtLink
+            >Work with me</NuxtLink
           >
         </nav>
       </div>
@@ -312,14 +312,15 @@
               Ready to Automate Your Workflows?
             </h3>
             <p class="text-muted-foreground mb-6 max-w-lg mx-auto">
-              We implement AI automation for your business for free. You only
-              pay per usage.
+              Pricing is custom, based on your budget. I will not leave you
+              hanging, and I will teach you how to monitor and maintain the
+              system if you do not want to keep paying me.
             </p>
             <NuxtLink
               to="/#contact"
               class="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-content font-semibold hover:bg-primary-focus transition-colors"
             >
-              Get Started Free
+              Work with me
             </NuxtLink>
           </div>
         </div>
@@ -372,8 +373,8 @@
             <p
               class="text-sm text-muted-foreground leading-relaxed max-w-md"
             >
-              We automate your business workflows using the newest AI
-              technologies. Free implementation, pay only per usage.
+              Ali Fawaz builds software with the newest AI technologies.
+              Pricing is custom, based on your budget.
             </p>
           </div>
 

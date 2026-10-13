@@ -18,16 +18,68 @@ useHead({
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 html {
   scroll-behavior: smooth;
 }
 
+button:active,
+a.bg-primary:active {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  button:active,
+  a.bg-primary:active {
+    transform: none;
+  }
+}
+
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.47;
+  letter-spacing: -0.011em;
+  color: #1d1d1f;
+  background: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body .rounded-xl {
+  border-radius: 12px;
+}
+
+body .rounded-2xl,
+body .rounded-3xl {
+  border-radius: 22px;
+}
+
+body .font-bold {
+  font-weight: 600;
+  letter-spacing: -0.022em;
+}
+
+header nav a {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+body a.bg-primary,
+body button.bg-primary,
+body a.border-primary {
+  height: 32px;
+  min-height: 32px;
+  padding: 0 16px;
+  border-radius: 980px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1;
 }
 
 ::-webkit-scrollbar {
@@ -54,25 +106,25 @@ body {
 :root {
     /* Light theme - Enterprise Trust Blue */
     --color-background: #FFFFFF;
-    --color-foreground: #111827;
-    --color-muted-foreground: #6B7280;
+    --color-foreground: #1D1D1F;
+    --color-muted-foreground: #6E6E73;
 
     /* Base colors - Light theme */
     --color-base: #FFFFFF;
     --color-base-50: #FFFFFF;
-    --color-base-100: #F9FAFB;
-    --color-base-200: #F3F4F6;
-    --color-base-300: #E5E7EB;
+    --color-base-100: #F5F5F7;
+    --color-base-200: #E8E8ED;
+    --color-base-300: #D2D2D7;
     --color-base-400: #D1D5DB;
     --color-base-500: #9CA3AF;
     --color-base-600: #6B7280;
     --color-base-700: #4B5563;
     --color-base-800: #374151;
     --color-base-900: #1F2937;
-    --color-base-content: #111827;
+    --color-base-content: #1D1D1F;
 
-    /* Primary colors - Deep Trust Blue */
-    --color-primary: #1E40AF;
+    /* Primary — Apple blue */
+    --color-primary: #0071E3;
     --color-primary-50: #EFF6FF;
     --color-primary-100: #DBEAFE;
     --color-primary-200: #BFDBFE;
@@ -83,12 +135,12 @@ body {
     --color-primary-700: #1D4ED8;
     --color-primary-800: #1E40AF;
     --color-primary-900: #1E3A8A;
-    --color-primary-focus: #1D4ED8;
+    --color-primary-focus: #0077ED;
     --color-primary-content: #FFFFFF;
     --color-primary-light: #60A5FA;
 
-    /* Secondary colors - Teal complement */
-    --color-secondary: #0D9488;
+    /* Secondary — graphite, one accent only */
+    --color-secondary: #1D1D1F;
     --color-secondary-50: #F0FDFA;
     --color-secondary-100: #CCFBF1;
     --color-secondary-200: #99F6E4;
