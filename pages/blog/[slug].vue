@@ -254,7 +254,8 @@
 
           <!-- Article Content -->
           <div class="blog-content">
-            <component :is="blog.content" />
+            <component :is="blog.content" v-if="blog.content" />
+            <div v-else v-html="blog.html"></div>
           </div>
 
           <!-- Share & Back -->
@@ -326,6 +327,10 @@
         </div>
       </div>
     </article>
+
+    <div v-else-if="postPending" class="pt-32 pb-20 text-center">
+      <p class="text-xl text-muted-foreground">Loading article…</p>
+    </div>
 
     <!-- 404 State -->
     <div v-else class="pt-32 pb-20 text-center">
@@ -427,9 +432,14 @@
           <div
             class="flex flex-col md:flex-row justify-between items-center"
           >
-            <p class="text-sm mb-4 md:mb-0 text-muted-foreground">
-              &copy; 2026 Tech FA. All rights reserved.
-            </p>
+            <div class="mb-4 md:mb-0">
+              <p class="text-sm text-muted-foreground">
+                &copy; 2026 Afawaz Technologies Inc. All rights reserved.
+              </p>
+              <p class="text-xs text-muted-foreground mt-1">
+                Tech FA is a trade name of Afawaz Technologies Inc.
+              </p>
+            </div>
             <div class="flex space-x-4">
               <a
                 href="#"
@@ -463,7 +473,6 @@ import BlogRestaurants from "~/components/blogRestaurants.vue";
 
 const mobileMenuOpen = ref(false);
 const route = useRoute();
-const slug = route.params.slug;
 
 const blogs = {
   "benefits-of-ai-automation-for-restaurants": {
@@ -514,71 +523,109 @@ const blogs = {
   },
 };
 
-const blog = computed(() => blogs[slug] || null);
+const slug = computed(() => String(route.params.slug || ""));
+
+const { data: generatedPost, status: generatedStatus } = await useAsyncData(
+  () => `generated-blog-${slug.value}`,
+  async () => {
+    if (blogs[slug.value]) return null;
+    try {
+      return await $fetch(`/api/blogs/${slug.value}`);
+    } catch {
+      return null;
+    }
+  },
+  { watch: [slug] },
+);
+
+const blog = computed(() => {
+  const staticPost = blogs[slug.value];
+  if (staticPost) return staticPost;
+  const generated = generatedPost.value;
+  if (!generated) return null;
+  return {
+    ...generated,
+    content: null,
+    image: generated.image || null,
+  };
+});
+
+const postPending = computed(
+  () => !blogs[slug.value] && generatedStatus.value === "pending",
+);
 
 useSeoMeta({
-  title: blog.value
-    ? `${blog.value.title} | Tech FA Blog`
-    : "Blog Post Not Found | Tech FA",
-  ogTitle: blog.value
-    ? `${blog.value.title} | Tech FA Blog`
-    : "Blog Post Not Found",
-  description: blog.value
-    ? blog.value.excerpt
-    : "The blog post you are looking for was not found.",
-  ogDescription: blog.value ? blog.value.excerpt : "Blog post not found",
-  ogImage: blog.value?.image || "/tech-fa-full.png",
-  ogUrl: `https://tech-fa.ca/blog/${slug}`,
+  title: computed(() =>
+    blog.value
+      ? `${blog.value.title} | Tech FA Blog`
+      : "Blog Post Not Found | Tech FA",
+  ),
+  ogTitle: computed(() =>
+    blog.value ? `${blog.value.title} | Tech FA Blog` : "Blog Post Not Found",
+  ),
+  description: computed(() =>
+    blog.value
+      ? blog.value.excerpt
+      : "The blog post you are looking for was not found.",
+  ),
+  ogDescription: computed(() =>
+    blog.value ? blog.value.excerpt : "Blog post not found",
+  ),
+  ogImage: computed(() => blog.value?.image || "/tech-fa-full.png"),
+  ogUrl: computed(() => `https://tech-fa.ca/blog/${slug.value}`),
   ogType: "article",
   ogSiteName: "Tech FA",
   twitterCard: "summary_large_image",
-  twitterTitle: blog.value
-    ? `${blog.value.title} | Tech FA Blog`
-    : "Blog Post Not Found",
-  twitterDescription: blog.value ? blog.value.excerpt : "Blog post not found",
-  robots: blog.value ? "index, follow" : "noindex",
+  twitterTitle: computed(() =>
+    blog.value ? `${blog.value.title} | Tech FA Blog` : "Blog Post Not Found",
+  ),
+  twitterDescription: computed(() =>
+    blog.value ? blog.value.excerpt : "Blog post not found",
+  ),
+  robots: computed(() => (blog.value ? "index, follow" : "noindex")),
 });
 
-useHead({
-  htmlAttrs: { lang: "en" },
-  link: [
-    {
-      rel: "canonical",
-      href: `https://tech-fa.ca/blog/${slug}`,
-    },
-  ],
-});
-
-if (blog.value) {
-  useHead({
-    script: [
+useHead(
+  computed(() => ({
+    htmlAttrs: { lang: "en" },
+    link: [
       {
-        type: "application/ld+json",
-        innerHTML: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Article",
-          headline: blog.value.title,
-          description: blog.value.excerpt,
-          datePublished: blog.value.publishedDate,
-          author: {
-            "@type": "Organization",
-            name: "Tech FA",
-            url: "https://tech-fa.ca",
-          },
-          publisher: {
-            "@type": "Organization",
-            name: "Tech FA",
-            url: "https://tech-fa.ca",
-            logo: {
-              "@type": "ImageObject",
-              url: "https://tech-fa.ca/tech-fa-full.png",
-            },
-          },
-        }),
+        rel: "canonical",
+        href: `https://tech-fa.ca/blog/${slug.value}`,
       },
     ],
-  });
-}
+    script: blog.value
+      ? [
+          {
+            type: "application/ld+json",
+            innerHTML: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              headline: blog.value.title,
+              description: blog.value.excerpt,
+              datePublished: blog.value.publishedDate,
+              author: {
+                "@type": "Organization",
+                name: "Tech FA",
+                url: "https://tech-fa.ca",
+              },
+              publisher: {
+                "@type": "Organization",
+                "@id": "https://tech-fa.ca/#organization",
+                name: "Tech FA",
+                legalName: "Afawaz Technologies Inc.",
+                url: "https://tech-fa.ca",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://tech-fa.ca/tech-fa-full.png",
+                },
+              },
+            }),
+          },
+        ]
+      : [],
+  })),
+);
 </script>
 
 <style scoped>

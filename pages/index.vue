@@ -1675,9 +1675,14 @@
             <div
               class="flex flex-col md:flex-row justify-between items-center"
             >
-              <p class="text-sm mb-4 md:mb-0 text-muted-foreground">
-                &copy; 2026 Ali Fawaz. All rights reserved.
-              </p>
+              <div class="mb-4 md:mb-0">
+                <p class="text-sm text-muted-foreground">
+                  &copy; 2026 Afawaz Technologies Inc. All rights reserved.
+                </p>
+                <p class="text-xs text-muted-foreground mt-1">
+                  Tech FA is a trade name of Afawaz Technologies Inc.
+                </p>
+              </div>
               <div class="flex space-x-4">
                 <a
                   href="https://www.linkedin.com/company/tech-fa"
@@ -1699,7 +1704,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { computed, ref, onMounted } from "vue";
 
 useSeoMeta({
   title: "Ali Fawaz | Software Engineering Arm for Businesses",
@@ -1749,6 +1754,15 @@ useHead({
               "Business automation",
               "Workflow automation",
             ],
+            worksFor: { "@id": "https://tech-fa.ca/#organization" },
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://tech-fa.ca/#organization",
+            name: "Tech FA",
+            legalName: "Afawaz Technologies Inc.",
+            url: "https://tech-fa.ca/",
+            email: "ali@tech-fa.ca",
           },
           {
             "@type": "ProfilePage",
@@ -1766,6 +1780,7 @@ useHead({
             name: "Ali Fawaz",
             url: "https://tech-fa.ca/",
             publisher: { "@id": "https://tech-fa.ca/#ali-fawaz" },
+            copyrightHolder: { "@id": "https://tech-fa.ca/#organization" },
           },
         ],
       }),
@@ -1787,7 +1802,7 @@ const submitStatus = ref({
   message: "",
 });
 
-const blogPosts = ref([
+const staticBlogPosts = [
   {
     slug: "benefits-of-ai-automation-for-restaurants",
     title: "How AI Automation Helps Restaurants Serve Guests Faster",
@@ -1839,7 +1854,19 @@ const blogPosts = ref([
     icon: "🤖",
     gradient: "bg-gradient-to-br from-orange-500 to-red-600",
   },
-]);
+];
+
+const { data: generatedBlogPosts } = await useFetch("/api/blogs", {
+  default: () => [],
+});
+
+const blogPosts = computed(() => {
+  const staticSlugs = new Set(staticBlogPosts.map((post) => post.slug));
+  const generated = (generatedBlogPosts.value || []).filter(
+    (post) => !staticSlugs.has(post.slug),
+  );
+  return [...generated, ...staticBlogPosts];
+});
 
 const handleSubmit = async () => {
   try {

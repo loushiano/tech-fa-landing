@@ -10,6 +10,18 @@ export default defineNuxtConfig({
     port: 8000,
   },
 
+  nitro: {
+    serverAssets: [
+      {
+        baseName: "blogs",
+        dir: "./content/blog",
+      },
+    ],
+    prerender: {
+      routes: ["/sitemap.xml"],
+    },
+  },
+
   app: {
     head: {
       htmlAttrs: { lang: "en" },

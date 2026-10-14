@@ -388,9 +388,14 @@
           <div
             class="flex flex-col md:flex-row justify-between items-center"
           >
-            <p class="text-sm mb-4 md:mb-0 text-muted-foreground">
-              &copy; 2026 Tech FA. All rights reserved.
-            </p>
+            <div class="mb-4 md:mb-0">
+              <p class="text-sm text-muted-foreground">
+                &copy; 2026 Afawaz Technologies Inc. All rights reserved.
+              </p>
+              <p class="text-xs text-muted-foreground mt-1">
+                Tech FA is a trade name of Afawaz Technologies Inc.
+              </p>
+            </div>
             <div class="flex space-x-4">
               <a
                 href="#"
@@ -417,7 +422,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 useSeoMeta({
   title: "Blog | Tech FA - AI & Business Automation Insights",
@@ -444,7 +449,7 @@ useHead({
 
 const mobileMenuOpen = ref(false);
 
-const blogs = ref([
+const staticBlogs = [
   {
     slug: "benefits-of-ai-automation-for-restaurants",
     title: "How AI Automation Helps Restaurants Serve Guests Faster",
@@ -506,7 +511,19 @@ const blogs = ref([
     image: null,
     available: false,
   },
-]);
+];
+
+const { data: generatedBlogs } = await useFetch("/api/blogs", {
+  default: () => [],
+});
+
+const blogs = computed(() => {
+  const staticSlugs = new Set(staticBlogs.map((post) => post.slug));
+  const generated = (generatedBlogs.value || []).filter(
+    (post) => !staticSlugs.has(post.slug),
+  );
+  return [...generated, ...staticBlogs];
+});
 
 const subscriptionEmail = ref("");
 const isSubscribing = ref(false);
