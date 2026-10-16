@@ -17,9 +17,6 @@ export default defineNuxtConfig({
         dir: "./content/blog",
       },
     ],
-    prerender: {
-      routes: ["/sitemap.xml"],
-    },
   },
 
   app: {

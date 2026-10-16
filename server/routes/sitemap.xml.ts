@@ -13,24 +13,6 @@ const STATIC_URLS = [
     changefreq: "weekly",
     priority: "0.7",
   },
-  {
-    loc: "https://tech-fa.ca/blog/smart-software-solutions-backbone-modern-business",
-    lastmod: "2026-02-09",
-    changefreq: "monthly",
-    priority: "0.6",
-  },
-  {
-    loc: "https://tech-fa.ca/blog/benefits-of-ai-automation-for-restaurants",
-    lastmod: "2026-04-29",
-    changefreq: "monthly",
-    priority: "0.6",
-  },
-  {
-    loc: "https://tech-fa.ca/blog/benefits-of-ai-automation-for-mechanics",
-    lastmod: "2026-04-29",
-    changefreq: "monthly",
-    priority: "0.6",
-  },
 ];
 
 function escapeXml(value: string): string {
@@ -72,5 +54,6 @@ export default defineEventHandler(async (event) => {
   ].join("\n");
 
   setHeader(event, "content-type", "application/xml; charset=utf-8");
+  setHeader(event, "cache-control", "public, max-age=0, must-revalidate");
   return body;
 });

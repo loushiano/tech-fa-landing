@@ -156,10 +156,11 @@
       <div class="container mx-auto px-4">
         <div class="max-w-5xl mx-auto">
           <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-            <NuxtLink
+            <component
+              :is="blog.available ? 'a' : 'div'"
               v-for="blog in blogs"
               :key="blog.slug"
-              :to="blog.available ? `/blog/${blog.slug}` : undefined"
+              :href="blog.available ? `/blog/${blog.slug}` : undefined"
               :class="[
                 'group rounded-2xl border border-base-300 overflow-hidden transition-all duration-300',
                 blog.available
@@ -258,7 +259,7 @@
                   >
                 </div>
               </div>
-            </NuxtLink>
+            </component>
           </div>
 
           <!-- Newsletter Signup -->
@@ -449,44 +450,9 @@ useHead({
 
 const mobileMenuOpen = ref(false);
 
-const staticBlogs = [
-  {
-    slug: "benefits-of-ai-automation-for-restaurants",
-    title: "How AI Automation Helps Restaurants Serve Guests Faster",
-    excerpt:
-      "See how AI call, email, review, and social messaging assistants help restaurants capture reservations, answer guests, and protect their reputation.",
-    date: "April 29, 2026",
-    category: "Industry Solutions",
-    icon: "🍽️",
-    gradient: "bg-gradient-to-br from-rose-500 to-orange-600",
-    image: null,
-    available: true,
-  },
-  {
-    slug: "benefits-of-ai-automation-for-mechanics",
-    title: "How AI Automation Helps Mechanics Book More Repair Jobs",
-    excerpt:
-      "Learn how auto shops can use AI assistants to answer missed calls, qualify repair requests, respond to reviews, and turn messages into appointments.",
-    date: "April 29, 2026",
-    category: "Industry Solutions",
-    icon: "🔧",
-    gradient: "bg-gradient-to-br from-slate-600 to-blue-700",
-    image: null,
-    available: true,
-  },
-  {
-    slug: "smart-software-solutions-backbone-modern-business",
-    title:
-      "Why Smart Software Solutions Are the Backbone of Modern Business",
-    excerpt:
-      "Real problems companies face every day, slow workflows, costly errors, and disconnected systems. Here's how smart software changes everything.",
-    date: "January 11, 2025",
-    category: "AI & Automation",
-    icon: "🧠",
-    gradient: "bg-gradient-to-br from-blue-500 to-purple-600",
-    image: "/blog-1.png",
-    available: true,
-  },
+const publishedBlogs = usePublishedBlogs();
+
+const comingSoonBlogs = [
   {
     slug: "turning-data-into-actionable-business-intelligence",
     title: "Turning Data Into Actionable Business Intelligence",
@@ -513,16 +479,13 @@ const staticBlogs = [
   },
 ];
 
-const { data: generatedBlogs } = await useFetch("/api/blogs", {
-  default: () => [],
-});
-
 const blogs = computed(() => {
-  const staticSlugs = new Set(staticBlogs.map((post) => post.slug));
-  const generated = (generatedBlogs.value || []).filter(
-    (post) => !staticSlugs.has(post.slug),
-  );
-  return [...generated, ...staticBlogs];
+  const published = publishedBlogs.value || [];
+  const taken = new Set(published.map((post) => post.slug));
+  return [
+    ...published,
+    ...comingSoonBlogs.filter((post) => !taken.has(post.slug)),
+  ];
 });
 
 const subscriptionEmail = ref("");

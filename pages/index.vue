@@ -1285,10 +1285,11 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-              <NuxtLink
+              <component
+                :is="post.available === false ? 'div' : 'a'"
                 v-for="post in blogPosts"
                 :key="post.slug"
-                :to="`/blog/${post.slug}`"
+                :href="post.available === false ? undefined : `/blog/${post.slug}`"
                 class="group bg-background rounded-2xl border border-base-300 overflow-hidden transition-all duration-300"
                 data-animate="fade-up"
               >
@@ -1328,7 +1329,7 @@
                     {{ post.excerpt }}
                   </p>
                 </div>
-              </NuxtLink>
+              </component>
             </div>
 
             <div class="text-center mt-12" data-animate="fade-up">
@@ -1802,38 +1803,9 @@ const submitStatus = ref({
   message: "",
 });
 
-const staticBlogPosts = [
-  {
-    slug: "benefits-of-ai-automation-for-restaurants",
-    title: "How AI Automation Helps Restaurants Serve Guests Faster",
-    excerpt:
-      "See how AI call, email, review, and social messaging assistants help restaurants capture reservations, answer guests, and protect their reputation.",
-    date: "Apr 29, 2026",
-    category: "Industry Solutions",
-    icon: "🍽️",
-    gradient: "bg-gradient-to-br from-rose-500 to-orange-600",
-  },
-  {
-    slug: "benefits-of-ai-automation-for-mechanics",
-    title: "How AI Automation Helps Mechanics Book More Repair Jobs",
-    excerpt:
-      "Learn how auto shops can use AI assistants to answer missed calls, qualify repair requests, respond to reviews, and turn messages into appointments.",
-    date: "Apr 29, 2026",
-    category: "Industry Solutions",
-    icon: "🔧",
-    gradient: "bg-gradient-to-br from-slate-600 to-blue-700",
-  },
-  {
-    slug: "smart-software-solutions-backbone-modern-business",
-    title:
-      "Why Smart Software Solutions Are the Backbone of Modern Business",
-    excerpt:
-      "Real problems companies face every day — slow workflows, costly errors, and disconnected systems.",
-    date: "Jan 11, 2025",
-    category: "AI & Automation",
-    icon: "🧠",
-    gradient: "bg-gradient-to-br from-blue-500 to-purple-600",
-  },
+const publishedBlogs = usePublishedBlogs();
+
+const comingSoonPosts = [
   {
     slug: "turning-data-into-actionable-business-intelligence",
     title: "Turning Data Into Actionable Business Intelligence",
@@ -1843,6 +1815,7 @@ const staticBlogPosts = [
     category: "Analytics",
     icon: "📊",
     gradient: "bg-gradient-to-br from-green-500 to-teal-600",
+    available: false,
   },
   {
     slug: "complete-guide-workflow-automation",
@@ -1853,19 +1826,17 @@ const staticBlogPosts = [
     category: "Automation",
     icon: "🤖",
     gradient: "bg-gradient-to-br from-orange-500 to-red-600",
+    available: false,
   },
 ];
 
-const { data: generatedBlogPosts } = await useFetch("/api/blogs", {
-  default: () => [],
-});
-
 const blogPosts = computed(() => {
-  const staticSlugs = new Set(staticBlogPosts.map((post) => post.slug));
-  const generated = (generatedBlogPosts.value || []).filter(
-    (post) => !staticSlugs.has(post.slug),
-  );
-  return [...generated, ...staticBlogPosts];
+  const published = publishedBlogs.value || [];
+  const taken = new Set(published.map((post) => post.slug));
+  return [
+    ...published,
+    ...comingSoonPosts.filter((post) => !taken.has(post.slug)),
+  ];
 });
 
 const handleSubmit = async () => {
