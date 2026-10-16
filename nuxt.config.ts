@@ -1,5 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { defineNuxtConfig } from "nuxt/config";
+
+const rootDir = dirname(fileURLToPath(import.meta.url));
 
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
@@ -14,7 +18,8 @@ export default defineNuxtConfig({
     serverAssets: [
       {
         baseName: "blogs",
-        dir: "./content/blog",
+        // Nitro resolves this from server/, so a relative ./content/blog misses the posts.
+        dir: resolve(rootDir, "content/blog"),
       },
     ],
   },
