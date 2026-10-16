@@ -1,4 +1,4 @@
-import sgMail from "@sendgrid/mail";
+import { Resend } from "resend";
 
 export default defineEventHandler(async (event) => {
   try {
@@ -10,13 +10,12 @@ export default defineEventHandler(async (event) => {
       throw new Error("Missing required fields");
     }
 
-    // Set SendGrid API key
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
-    // Create email message
-    const msg = {
+    const { error } = await resend.emails.send({
       to: process.env.TO_EMAIL,
       from: process.env.FROM_EMAIL,
+      replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       text: `
         Name: ${name}
@@ -34,10 +33,11 @@ export default defineEventHandler(async (event) => {
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
-    };
+    });
 
-    // Send email using SendGrid
-    await sgMail.send(msg);
+    if (error) {
+      throw new Error(error.message);
+    }
 
     return {
       status: 200,
